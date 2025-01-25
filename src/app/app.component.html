@@ -1,23 +1,25 @@
-<div>
-  @switch (globalState.currentShownContent()) {
-    @case ('CV') {
-      CV
+<div class="whole-stuff" [style.background]="getBackgroundColorByShownContent()">
+  <div>
+    @switch (globalState.currentShownContent()) {
+      @case ('CV') {
+        CV
+      }
+      @case ('illchess') {
+        illchess
+      }
+      @case ('leon') {
+        leon
+      }
+      @case ('inbox-outbox') {
+        inbox-outbox
+      }
     }
-    @case ('illchess') {
-      illchess
-    }
-    @case ('leon') {
-      leon
-    }
-    @case ('inbox-outbox') {
-      inbox-outbox
-    }
-  }
+  </div>
+  
+  <button (click)="changeShownContent('CV')">CV</button>
+  <button (click)="changeShownContent('illchess')">illchess</button>
+  <button (click)="changeShownContent('leon')">leon</button>
+  <button (click)="changeShownContent('inbox-outbox')">inbox-outbox</button>
+  
+  <router-outlet />
 </div>
-
-<button (click)="changeShownContent('CV')">CV</button>
-<button (click)="changeShownContent('illchess')">illchess</button>
-<button (click)="changeShownContent('leon')">leon</button>
-<button (click)="changeShownContent('inbox-outbox')">inbox-outbox</button>
-
-<router-outlet />
