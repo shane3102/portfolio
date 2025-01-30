@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { GlobalStore } from './state/GlobalStore';
+import { ProjectDescriptionLayoutComponent } from './component/project-description-layout/project-description-layout.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ProjectDescriptionLayoutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -18,15 +19,20 @@ export class AppComponent {
   }
 
   getBackgroundColorByShownContent(): string {
-    switch(this.globalState.currentShownContent()) {
-      case 'CV': 
+
+    if (this.globalState.changingContent()) {
+      return 'white'
+    }
+
+    switch (this.globalState.currentShownContent()) {
+      case 'CV':
         return '#808080a1'
       case 'illchess':
         return '#964b00a1'
       case 'leon':
         return '#baff39a1'
       case 'inbox-outbox':
-        return '#add8e6a1'     
+        return '#add8e6a1'
     }
   }
 }

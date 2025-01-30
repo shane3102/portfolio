@@ -1,0 +1,33 @@
+<div class="title" [class.fade]="globalState.changingContent()">
+    @switch (globalState.currentShownContent()) {
+        @case ('CV') {
+            CV
+        }
+        @case ('illchess') {
+            illchess
+        }
+        @case ('leon') {
+            leon
+        }
+        @case ('inbox-outbox') {
+            inbox-outbox
+        }
+    }
+</div>
+
+<div class="description" [class.fade]="globalState.changingContent()">
+    @switch (globalState.currentShownContent()) {
+        @case ('CV') {
+            CV
+        }
+        @case ('illchess') {
+            illchess
+        }
+        @case ('leon') {
+            leon
+        }
+        @case ('inbox-outbox') {
+            inbox-outbox
+        }
+    }
+</div>

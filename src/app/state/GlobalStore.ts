@@ -1,20 +1,30 @@
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
 
 type GlobalState = {
-    currentShownContent: 'illchess' | 'leon' | 'inbox-outbox' | 'CV'
+    currentShownContent: 'illchess' | 'leon' | 'inbox-outbox' | 'CV',
+    changingContent: boolean
 }
 
 const initialState: GlobalState = {
-    currentShownContent: 'CV'
+    currentShownContent: 'CV',
+    changingContent: false
 }
 
 export const GlobalStore = signalStore(
-    {providedIn: 'root'},
+    { providedIn: 'root' },
     withState(initialState),
     withMethods(
         (store) => ({
             changeShownContent: (shownContent: 'illchess' | 'leon' | 'inbox-outbox' | 'CV') => {
-                patchState(store, {currentShownContent: shownContent})
+                if (store.currentShownContent() != shownContent) {
+                    patchState(store, { changingContent: true })
+                    setTimeout(
+                        () => {
+                            patchState(store, { currentShownContent: shownContent, changingContent: false })
+                        },
+                        500
+                    )
+                }
             }
         })
     )

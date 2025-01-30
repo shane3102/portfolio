@@ -1,20 +1,5 @@
 <div class="whole-stuff" [style.background]="getBackgroundColorByShownContent()">
-  <div>
-    @switch (globalState.currentShownContent()) {
-      @case ('CV') {
-        CV
-      }
-      @case ('illchess') {
-        illchess
-      }
-      @case ('leon') {
-        leon
-      }
-      @case ('inbox-outbox') {
-        inbox-outbox
-      }
-    }
-  </div>
+  <app-project-description-layout></app-project-description-layout>
   
   <button (click)="changeShownContent('CV')">CV</button>
   <button (click)="changeShownContent('illchess')">illchess</button>
