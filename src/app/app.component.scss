@@ -1,7 +1,7 @@
 .whole-stuff {
     width: 100dvw;
     height: 100dvh;
-    -webkit-transition: background-color 500ms linear;
-    -ms-transition: background-color 500ms linear;
-    transition: background-color 500ms linear;
+    -webkit-transition: background-color 500ms ease-out;
+    -ms-transition: background-color 500ms ease-out;
+    transition: background-color 500ms ease-out;
 }

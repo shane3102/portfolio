@@ -2,16 +2,16 @@
     font-size: 4.5em;
     text-align: center;
     font-weight: bold;
-    -webkit-transition: opacity 500ms linear;
-    -ms-transition: opacity 500ms linear;
-    transition: opacity 500ms linear;
+    -webkit-transition: opacity 250ms ease-out;
+    -ms-transition: opacity 250ms ease-out;
+    transition: opacity 250ms ease-out;
 }
 
 .description {
     padding:  0 5% 0 5%;
-    -webkit-transition: opacity 500ms linear;
-    -ms-transition: opacity 500ms linear;
-    transition: opacity 500ms linear;
+    -webkit-transition: opacity 250ms ease-out;
+    -ms-transition: opacity 250ms ease-out;
+    transition: opacity 250ms ease-out;
 }
 
 .fade {
