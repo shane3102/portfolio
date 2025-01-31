@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { GlobalStore } from '../../../state/GlobalStore';
 
 @Component({
   selector: 'app-navigation-sidebar',
@@ -7,5 +8,12 @@ import { Component, signal } from '@angular/core';
   styleUrl: './navigation-sidebar.component.scss'
 })
 export class NavigationSidebarComponent {
+
+  globalState = inject(GlobalStore)
+
   hover = signal(false)
+
+  changeShownContent(shownContent: 'illchess' | 'leon' | 'inbox-outbox' | 'CV') {
+    this.globalState.changeShownContent(shownContent)
+  }
 }

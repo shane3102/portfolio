@@ -3,5 +3,9 @@
     (mouseleave)="hover.set(false)" 
     class="navigation-body"
     [class.navigation-body-active]="hover()">
-    SIEMA
+    SIEMA<br>
+    <button style="width: 100%;" (click)="changeShownContent('CV')">CV</button><br>
+    <button style="width: 100%;" (click)="changeShownContent('illchess')">illchess</button><br>
+    <button style="width: 100%;" (click)="changeShownContent('leon')">leon</button><br>
+    <button style="width: 100%;" (click)="changeShownContent('inbox-outbox')">inbox-outbox</button><br>
 </div>

@@ -1,11 +1,5 @@
 <app-navigation-sidebar></app-navigation-sidebar>
 <div class="whole-stuff" [style.background]="getBackgroundColorByShownContent()">
   <app-project-description-layout></app-project-description-layout>
-  
-  <button (click)="changeShownContent('CV')">CV</button>
-  <button (click)="changeShownContent('illchess')">illchess</button>
-  <button (click)="changeShownContent('leon')">leon</button>
-  <button (click)="changeShownContent('inbox-outbox')">inbox-outbox</button>
-  
   <router-outlet />
 </div>
