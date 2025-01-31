@@ -19,10 +19,6 @@ export class AppComponent {
 
   globalState = inject(GlobalStore)
 
-  changeShownContent(shownContent: 'illchess' | 'leon' | 'inbox-outbox' | 'CV') {
-    this.globalState.changeShownContent(shownContent)
-  }
-
   getBackgroundColorByShownContent(): string {
 
     if (this.globalState.changingContent()) {
