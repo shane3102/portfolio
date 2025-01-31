@@ -18,16 +18,17 @@
 <div class="description" [class.fade]="globalState.changingContent()">
     @switch (globalState.currentShownContent()) {
         @case ('CV') {
-            CV
+            <!-- TODO propably CV in some entirely different place -->
+            <p>CV</p>
         }
         @case ('illchess') {
-            illchess
+            <app-illchess-description></app-illchess-description>
         }
         @case ('leon') {
-            leon
+            <app-leon-description></app-leon-description>
         }
         @case ('inbox-outbox') {
-            inbox-outbox
+            <app-inbox-outbox-description></app-inbox-outbox-description>
         }
     }
 </div>
