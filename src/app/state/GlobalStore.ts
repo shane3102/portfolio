@@ -22,7 +22,7 @@ export const GlobalStore = signalStore(
                         () => {
                             patchState(store, { currentShownContent: shownContent, changingContent: false })
                         },
-                        500
+                        250
                     )
                 }
             }

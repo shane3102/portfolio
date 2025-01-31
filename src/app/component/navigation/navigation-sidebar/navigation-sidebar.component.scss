@@ -1,0 +1,21 @@
+.navigation-body {
+    position: absolute;
+    right: 0;
+    top: 2.5dvh;
+    height: 85dvh;
+    width: 5dvw;
+    background-color: lightgrey;
+    transition: width 250ms ease-out, height 250ms ease-out, top 250ms ease-out;
+    -webkit-transition: width 250ms ease-out, height 250ms ease-out, top 250ms ease-out;
+    -ms-transition: width 250ms ease-out, height 250ms ease-out, top 250ms ease-out;
+    border-radius: 5dvh 0 0 5dvh;
+    padding-top: 5dvh;
+    padding-bottom: 5dvh;
+    box-shadow: 0 0 1dvw lightgrey;
+}
+
+.navigation-body-active {
+    width: 10dvw;
+    height: 88dvh;
+    top: 1dvh;
+}
