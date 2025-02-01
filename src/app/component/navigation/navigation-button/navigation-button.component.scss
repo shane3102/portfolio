@@ -1,0 +1,16 @@
+.navigation-button {
+    user-select: none;
+    background-color: gray;
+    transition: background-color 100ms ease-out, height 250ms ease-out;
+    -webkit-transition: background-color 100ms ease-out, height 250ms ease-out;
+    -ms-transition: background-color 100ms ease-out, height 250ms ease-out;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-button:hover {
+    background-color: pink;
+    height: 15vh;
+}

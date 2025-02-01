@@ -1,9 +1,12 @@
 import { Component, inject, signal } from '@angular/core';
 import { GlobalStore } from '../../../state/GlobalStore';
+import { NavigationButtonComponent } from '../navigation-button/navigation-button.component';
 
 @Component({
   selector: 'app-navigation-sidebar',
-  imports: [],
+  imports: [
+    NavigationButtonComponent
+  ],
   templateUrl: './navigation-sidebar.component.html',
   styleUrl: './navigation-sidebar.component.scss'
 })
