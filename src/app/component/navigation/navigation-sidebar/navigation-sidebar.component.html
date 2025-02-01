@@ -4,8 +4,8 @@
     class="navigation-body"
     [class.navigation-body-active]="hover()">
     SIEMA<br>
-    <button style="width: 100%;" (click)="changeShownContent('CV')">CV</button><br>
-    <button style="width: 100%;" (click)="changeShownContent('illchess')">illchess</button><br>
-    <button style="width: 100%;" (click)="changeShownContent('leon')">leon</button><br>
-    <button style="width: 100%;" (click)="changeShownContent('inbox-outbox')">inbox-outbox</button><br>
+    <app-navigation-button (click)="changeShownContent('CV')" text="CV"></app-navigation-button>
+    <app-navigation-button (click)="changeShownContent('illchess')" text="illchess"></app-navigation-button>
+    <app-navigation-button (click)="changeShownContent('leon')" text="leon"></app-navigation-button>
+    <app-navigation-button (click)="changeShownContent('inbox-outbox')" text="inbox-outbox"></app-navigation-button>
 </div>
