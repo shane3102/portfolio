@@ -1,6 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { GlobalStore } from '../../../state/GlobalStore';
 import { NavigationButtonComponent } from '../navigation-button/navigation-button.component';
+import { colorDefinitions } from '../../../utils/ColorsPerProjectDefinition';
 
 @Component({
   selector: 'app-navigation-sidebar',
@@ -25,16 +26,9 @@ export class NavigationSidebarComponent {
     if (this.globalState.changingContent()) {
       return 'white'
     }
+    let foundColor = colorDefinitions.get(this.globalState.currentShownContent())
 
-    switch (this.globalState.currentShownContent()) {
-      case 'CV':
-        return '#808080a1'
-      case 'illchess':
-        return '#964b00a1'
-      case 'leon':
-        return '#baff39a1'
-      case 'inbox-outbox':
-        return '#add8e6a1'
-    }
+    return  foundColor ? foundColor : 'white'
+
   }
 }
