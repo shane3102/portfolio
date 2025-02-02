@@ -1,4 +1,5 @@
 import { Component, Input, Output } from '@angular/core';
+import { colorDefinitions } from '../../../utils/ColorsPerProjectDefinition';
 
 @Component({
   selector: 'app-navigation-button',
@@ -9,5 +10,9 @@ import { Component, Input, Output } from '@angular/core';
 export class NavigationButtonComponent {
 
   @Input() text: string = ""
+
+  getColorDefinition() {
+    return colorDefinitions.get(this.text)
+  }
 
 }
