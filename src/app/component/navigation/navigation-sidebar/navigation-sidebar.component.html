@@ -2,10 +2,12 @@
     (mouseenter)="hover.set(true)" 
     (mouseleave)="hover.set(false)" 
     class="navigation-body"
-    [class.navigation-body-active]="hover()">
-    SIEMA<br>
-    <app-navigation-button (click)="changeShownContent('CV')" text="CV"></app-navigation-button>
-    <app-navigation-button (click)="changeShownContent('illchess')" text="illchess"></app-navigation-button>
-    <app-navigation-button (click)="changeShownContent('leon')" text="leon"></app-navigation-button>
-    <app-navigation-button (click)="changeShownContent('inbox-outbox')" text="inbox-outbox"></app-navigation-button>
-</div>
+    [class.navigation-body-active]="hover()"
+    [style.background]="getBackgroundColorByShownContent()"
+        >
+        SIEMA<br>
+        <app-navigation-button (click)="changeShownContent('CV')" text="CV"></app-navigation-button>
+        <app-navigation-button (click)="changeShownContent('illchess')" text="illchess"></app-navigation-button>
+        <app-navigation-button (click)="changeShownContent('leon')" text="leon"></app-navigation-button>
+        <app-navigation-button (click)="changeShownContent('inbox-outbox')" text="inbox-outbox"></app-navigation-button>
+    </div>
