@@ -13,8 +13,14 @@
     box-shadow: 0 0 2dvw gray;
 }
 
-.navigation-body-active {
-    width: 12.5dvw;
+.navigation-body:hover {
+    width: 11dvw;
     height: 88dvh;
     top: 1dvh;
 }
+
+// .navigation-body-active {
+    // width: 12.5dvw;
+    // height: 88dvh;
+    // top: 1dvh;
+// }
