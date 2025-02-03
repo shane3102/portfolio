@@ -1,3 +1,5 @@
-<div class="navigation-button" [style.background-color]="getColorDefinition()">
+<div 
+    class="navigation-button" 
+    [ngStyle]="this.text ? {'background-color': getColorDefinition()} : {}">
     <div>{{text}}</div>
 </div>
