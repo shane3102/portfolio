@@ -1,18 +1,19 @@
-import { Component, Input, Output } from '@angular/core';
-import { colorDefinitions } from '../../../utils/ColorsPerProjectDefinition';
+import { NgStyle } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { ColorsPerProjectDefinition } from '../../../utils/ColorsPerProjectDefinition';
 
 @Component({
   selector: 'app-navigation-button',
-  imports: [],
+  imports: [NgStyle],
   templateUrl: './navigation-button.component.html',
   styleUrl: './navigation-button.component.scss'
 })
 export class NavigationButtonComponent {
 
-  @Input() text: string = ""
+  @Input() text?: 'illchess' | 'leon' | 'inbox-outbox' | 'CV' = undefined
 
   getColorDefinition() {
-    return colorDefinitions.get(this.text)
+    return this.text ? ColorsPerProjectDefinition.getColorByProjectByTransparency(this.text) : 'white'
   }
 
 }
