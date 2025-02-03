@@ -5,8 +5,9 @@
     [class.navigation-body-active]="hover()"
     [style.background]="getBackgroundColorByShownContent()"
         >
-        SIEMA<br>
+        <app-naigation-separator [title]="'Główne'"></app-naigation-separator>
         <app-navigation-button (click)="changeShownContent('CV')" text="CV"></app-navigation-button>
+        <app-naigation-separator [title]="'Projekty'"></app-naigation-separator>
         <app-navigation-button (click)="changeShownContent('illchess')" text="illchess"></app-navigation-button>
         <app-navigation-button (click)="changeShownContent('leon')" text="leon"></app-navigation-button>
         <app-navigation-button (click)="changeShownContent('inbox-outbox')" text="inbox-outbox"></app-navigation-button>

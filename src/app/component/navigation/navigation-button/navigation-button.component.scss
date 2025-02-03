@@ -8,7 +8,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0.5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    margin-top: 0.25vw;
+    margin-bottom: 0.25vw;
 }
 
 .navigation-button:not(:hover) {
@@ -16,5 +19,5 @@
 }
 
 .navigation-button:hover {
-    height: 15vh;
+    height: 13vh;
 }

@@ -1,0 +1,23 @@
+.separator {
+    height: 2vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line {
+    width: 80%;
+    border-top: 1px solid black;
+}
+
+.title {
+    font-size: 0.75em;
+}
+
+.line-with-title {
+    width: 80%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
