@@ -3,12 +3,14 @@ import { GlobalStore } from '../../../state/GlobalStore';
 import { ColorsPerProjectDefinition } from '../../../utils/ColorsPerProjectDefinition';
 import { NavigationButtonComponent } from '../navigation-button/navigation-button.component';
 import { NavigationSeparatorComponent } from '../navigation-separator/navigation-separator.component';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-navigation-sidebar',
   imports: [
     NavigationButtonComponent,
-    NavigationSeparatorComponent
+    NavigationSeparatorComponent,
+    NgStyle
   ],
   templateUrl: './navigation-sidebar.component.html',
   styleUrl: './navigation-sidebar.component.scss'

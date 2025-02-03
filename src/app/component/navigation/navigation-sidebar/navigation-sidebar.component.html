@@ -1,4 +1,8 @@
-<div class="navigation-body" [style.background]="getBackgroundColorByShownContent()">
+<div class="navigation-body"
+    [ngStyle]="{
+        'background-color': getBackgroundColorByShownContent(),
+        'box-shadow': '0 0 2vw '+getBackgroundColorByShownContent()
+    }">
     <app-navigation-separator [title]="'Główne'"></app-navigation-separator>
     <app-navigation-button (click)="changeShownContent('CV')" text="CV"></app-navigation-button>
     <app-navigation-separator [title]="'Projekty'"></app-navigation-separator>
