@@ -1,14 +1,8 @@
-<div 
-    (mouseenter)="hover.set(true)" 
-    (mouseleave)="hover.set(false)" 
-    class="navigation-body"
-    [class.navigation-body-active]="hover()"
-    [style.background]="getBackgroundColorByShownContent()"
-        >
-        <app-naigation-separator [title]="'Główne'"></app-naigation-separator>
-        <app-navigation-button (click)="changeShownContent('CV')" text="CV"></app-navigation-button>
-        <app-naigation-separator [title]="'Projekty'"></app-naigation-separator>
-        <app-navigation-button (click)="changeShownContent('illchess')" text="illchess"></app-navigation-button>
-        <app-navigation-button (click)="changeShownContent('leon')" text="leon"></app-navigation-button>
-        <app-navigation-button (click)="changeShownContent('inbox-outbox')" text="inbox-outbox"></app-navigation-button>
-    </div>
+<div class="navigation-body" [style.background]="getBackgroundColorByShownContent()">
+    <app-navigation-separator [title]="'Główne'"></app-navigation-separator>
+    <app-navigation-button (click)="changeShownContent('CV')" text="CV"></app-navigation-button>
+    <app-navigation-separator [title]="'Projekty'"></app-navigation-separator>
+    <app-navigation-button (click)="changeShownContent('illchess')" text="illchess"></app-navigation-button>
+    <app-navigation-button (click)="changeShownContent('leon')" text="leon"></app-navigation-button>
+    <app-navigation-button (click)="changeShownContent('inbox-outbox')" text="inbox-outbox"></app-navigation-button>
+</div>
