@@ -3,7 +3,7 @@
     right: 0;
     top: 2.5dvh;
     height: 85dvh;
-    width: 5dvw;
+    width: 7.5dvw;
     transition: width 250ms ease-out, height 250ms ease-out, top 250ms ease-out, background-color 500ms ease-out;
     -webkit-transition: width 250ms ease-out, height 250ms ease-out, top 250ms ease-out, background-color 500ms ease-out;
     -ms-transition: width 250ms ease-out, height 250ms ease-out, top 250ms ease-out, background-color 500ms ease-out;
@@ -14,7 +14,7 @@
 }
 
 .navigation-body-active {
-    width: 10dvw;
+    width: 12.5dvw;
     height: 88dvh;
     top: 1dvh;
 }
