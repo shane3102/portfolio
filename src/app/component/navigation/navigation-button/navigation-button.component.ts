@@ -12,6 +12,8 @@ export class NavigationButtonComponent {
 
   @Input() text?: 'illchess' | 'leon' | 'inbox-outbox' | 'CV' = undefined
 
+  hover = false
+
   getColorDefinition() {
     return this.text ? ColorsPerProjectDefinition.getColorByProjectByTransparency(this.text) : 'white'
   }

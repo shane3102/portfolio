@@ -1,8 +1,9 @@
 <div 
     class="navigation-button" 
-    [ngStyle]="this.text ? {
+    (mouseover)="hover=true" (mouseleave)="hover=false"
+    [ngStyle]="this.hover ? this.text ? {
         'background-color': getColorDefinition(),
-        'box-shadow': '0 0 2vw '+getColorDefinition()+'inset,0 0 0.25vw '+getColorDefinition()
-        } : {}">
+        'box-shadow': '0 0 2vw '+getColorDefinition()        
+    } : {} : {}">
     <div>{{text}}</div>
 </div>
