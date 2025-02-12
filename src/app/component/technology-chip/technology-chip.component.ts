@@ -9,6 +9,6 @@ import { Component, Input } from '@angular/core';
 export class TechnologyChipComponent {
 
   @Input() name?: string
-  @Input() imagePath?: string
+  @Input() image?: string
 
 }

@@ -1,7 +1,7 @@
 .chip {
     height: 2em;
     width: 8vw;
-    background-color: lightgray;
+    background-color: white;
     border-radius: 1em;
     display: flex;
     justify-content: center;
@@ -11,12 +11,13 @@
     font-size: 16px;
     margin: 0.5em 1vw;
     transition: all 200ms ease-out;
+    color: black;
+    box-shadow: 0 0 0.5dvw white;
+    transition: box-shadow 200ms ease-out;
 }
 
 .chip:hover {
-    height: 2.25em;
-    width: 9vw;
-    margin: 0.25em 0.5vw;
+    box-shadow: 0 0 1dvw white;
 }
 
 .chip-content {
@@ -24,16 +25,11 @@
     justify-content: space-around;
     align-items: center;
     width: 8vw;
-    transition: all 200ms ease-out;
-}
-
-.chip:hover .chip-content {
-    font-size: 18px;
 }
 
 .image {
-    height: 1.3em;
-    width: 1.3em;
+    height: 1.75em;
+    width: 1.75em;
     display: flex;
     justify-content: center;
     align-items: center;
