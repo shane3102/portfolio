@@ -1,0 +1,45 @@
+.chip {
+    height: 2em;
+    width: 8vw;
+    background-color: lightgray;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1vw;
+    user-select: none;
+    font-size: 16px;
+    margin: 0.5em 1vw;
+    transition: all 200ms ease-out;
+}
+
+.chip:hover {
+    height: 2.25em;
+    width: 9vw;
+    margin: 0.25em 0.5vw;
+}
+
+.chip-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 8vw;
+    transition: all 200ms ease-out;
+}
+
+.chip:hover .chip-content {
+    font-size: 18px;
+}
+
+.image {
+    height: 1.3em;
+    width: 1.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
