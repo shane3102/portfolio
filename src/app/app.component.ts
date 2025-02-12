@@ -1,8 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { GlobalStore } from './state/GlobalStore';
-import { ProjectDescriptionLayoutComponent } from './component/project-description-layout/project-description-layout.component';
 import { NavigationSidebarComponent } from './component/navigation/navigation-sidebar/navigation-sidebar.component';
+import { ProjectDescriptionLayoutComponent } from './component/project-description-layout/project-description-layout.component';
 
 @Component({
   selector: 'app-root',
