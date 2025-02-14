@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TechnologiesDefinitions } from '../../../utils/TechnologiesDefinitions';
 
 @Component({
   selector: 'app-technology-chip',
@@ -8,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class TechnologyChipComponent {
 
-  @Input() name?: string
-  @Input() image?: string
+  TechnologiesDefinitions = TechnologiesDefinitions
 
+  @Input() name?: string
 }
