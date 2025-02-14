@@ -1,0 +1,47 @@
+@import '../project-layout/project-layout.component.scss';
+
+.technology-chips {
+    position: relative;
+    display: flex; 
+    justify-self: start;
+    justify-content: left; 
+    align-items: center;
+    width: $project-layout-width;
+    height: 4em;
+    left: 0;
+    transition: left 500ms linear;
+    -webkit-transition: left 500ms linear;
+    -ms-transition: left 500ms linear;
+}
+
+.technology-chips:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+// forgive me i have sinned 
+.technology-chips-1 {
+    left: calc(-1 *($project-layout-width / 6))
+}
+
+.technology-chips-2 {
+    left: calc(-2 *($project-layout-width / 6))
+}
+
+.technology-chips-3 {
+    left: calc(-3 *($project-layout-width / 6))
+}
+
+.technology-chips-4 {
+    left: calc(-4 *($project-layout-width / 6))
+}
+
+.technology-chips-5 {
+    left: calc(-5 *($project-layout-width / 6))
+}
+
+.technology-chips-6 {
+    left: calc(-6 *($project-layout-width / 6))
+}

@@ -1,10 +1,14 @@
+import { NgStyle } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ColorsPerProjectDefinition } from '../../../utils/ColorsPerProjectDefinition';
-import { NgStyle } from '@angular/common';
+import { TechnologiesComponent } from '../technologies/technologies.component';
 
 @Component({
   selector: 'app-project-layout',
-  imports: [NgStyle],
+  imports: [
+    NgStyle,
+    TechnologiesComponent
+  ],
   templateUrl: './project-layout.component.html',
   styleUrl: './project-layout.component.scss'
 })
