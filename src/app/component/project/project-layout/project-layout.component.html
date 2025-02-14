@@ -1,0 +1,7 @@
+<div class="project-content"
+    (mouseover)="hover=true" (mouseleave)="hover=false"
+    [ngStyle]="this.hover ? this.projectTitle ? {
+        'box-shadow': '0 0 1vw dimgray inset, 0 0 5vw '+getColorDefinition()     
+    } : {} : {}">
+    <div>siema</div>
+</div>

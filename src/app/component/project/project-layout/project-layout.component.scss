@@ -1,0 +1,14 @@
+$width-default: 35vw;
+$width-min: 240px;
+
+.project-content {
+    max-width: max($width-default, $width-min);
+    border-radius: calc(max($width-default, $width-min) / 16);
+    height: 70dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 250ms ease-out;
+    box-shadow: 0 0 1vw dimgray inset;
+    padding: 1vw;
+}
