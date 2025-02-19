@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, input } from '@angular/core';
+import { TechnologiesDefinitions } from '../../../utils/TechnologiesDefinitions';
 
 @Component({
   selector: 'app-technology-info',
@@ -10,6 +11,8 @@ import { Component, input } from '@angular/core';
   styleUrl: './technology-info.component.scss'
 })
 export class TechnologyInfoComponent {
+
+  TechnologiesDefinitions = TechnologiesDefinitions
 
   technology = input<string | undefined>()
   isTechnologyChanged = input<boolean>()

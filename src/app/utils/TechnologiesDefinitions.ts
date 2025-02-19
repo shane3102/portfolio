@@ -1,25 +1,34 @@
 export class TechnologiesDefinitions {
-    static technologiesDefinitions: Map<string, string> = new Map(
+    static technologiesDefinitions: Map<string, TechnologyInfo> = new Map(
         [
             // Language
-            ["Java", "/logos/java.svg"],
-            ["Kotlin", "/logos/kotlin.svg"],
-            ["Typescript", "/logos/typescript.svg"],
+            ["Java", { logo: "/logos/java.svg", link: "https://www.java.com/pl/" }],
+            ["Kotlin", { logo: "/logos/kotlin.svg", link: "https://kotlinlang.org/" }],
+            ["Typescript", { logo: "/logos/typescript.svg", link: "https://www.typescriptlang.org/" }],
 
             // Framework
-            ["Angular", "/logos/angular.svg"],
-            ["Spring", "/logos/spring.svg"],
-            ["Quarkus", "/logos/quarkus.svg"],
+            ["Angular", { logo: "/logos/angular.svg", link: "https://angular.dev/" }],
+            ["Spring Boot", { logo: "/logos/spring.svg", link: "https://spring.io/projects/spring-boot" }],
+            ["Quarkus", { logo: "/logos/quarkus.svg", link: "https://quarkus.io/" }],
 
             // Other
-            ["PostgreSQL", "/logos/postgresql.svg"],
-            ["MySql", "/logos/mysql.svg"],
-            ["Redis", "/logos/redis.svg"],
-            ["RabbitMQ", "/logos/rabbitmq.svg"],
+            ["PostgreSQL", { logo: "/logos/postgresql.svg", link: "https://www.postgresql.org/" }],
+            ["MySql", { logo: "/logos/mysql.svg", link: "https://www.mysql.com/" }],
+            ["Redis", { logo: "/logos/redis.svg", link: "https://redis.io/" }],
+            ["RabbitMQ", { logo: "/logos/rabbitmq.svg", link: "https://www.rabbitmq.com/" }],
         ]
     )
 
     public static getSvgByTechnology(technology: string | undefined) {
-        return technology ? this.technologiesDefinitions.get(technology) : undefined
+        return technology ? this.technologiesDefinitions.get(technology)?.logo : undefined
     }
+
+    public static getLinkByTechnology(technology: string | undefined) {
+        return technology ? this.technologiesDefinitions.get(technology)?.link : undefined
+    }
+}
+
+interface TechnologyInfo {
+    logo: string,
+    link: string
 }
