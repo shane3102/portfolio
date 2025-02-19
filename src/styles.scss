@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
 
+$background-color: #232b2b;
+$color: white;
+
 body {
     margin: 0;
     font-family: "Roboto", serif;
+    height: 100%;
+    width: 100%;
+    background-color: $background-color;
+    color: $color;
 }

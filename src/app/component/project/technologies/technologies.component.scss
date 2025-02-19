@@ -1,4 +1,5 @@
 @import '../project-layout/project-layout.component.scss';
+@import '../../../../styles.scss';
 
 .content {
     display: flex;
@@ -8,11 +9,59 @@
     width: 100%;
 }
 
+.triangle {
+    transition: left 100ms linear, border 100ms linear;
+    -webkit-transition: left 100ms linear, border 100ms linear;
+    -ms-transition: left 100ms linear, border 100ms linear;
+    -moz-transition : left 100ms linear, border 100ms linear;
+    -o-transition : left 100ms linear, border 100ms linear;
+}
+
+.triangle-right {
+    position: absolute;
+    top: 1em;
+    left: $project-layout-width;
+    border-left: 1em solid $background-color;
+    border-right: 1em solid transparent;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+}
+
+.triangle-right:hover {
+    border-left: 1em solid green;
+}
+
+.technology-chips-wrapper:hover .triangle-right {
+    left: calc(-1.1em + $project-layout-width);
+}
+
+.triangle-left {
+    position: absolute;
+    top: 1em;
+    left: -2em;
+    border-left: 1em solid transparent;
+    border-right: 1em solid $background-color;
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+}
+
+.triangle-left:hover {
+    border-right: 1em solid green;
+}
+
+.technology-chips-wrapper:hover .triangle-left {
+    left: -0.9em;
+}
+
+.technology-chips-wrapper {
+    position: relative
+}
+
 .technology-chips {
     position: relative;
-    display: flex; 
+    display: flex;
     justify-self: start;
-    justify-content: left; 
+    justify-content: left;
     align-items: center;
     width: $project-layout-width;
     height: 4em;
