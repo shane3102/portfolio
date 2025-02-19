@@ -1,5 +1,6 @@
 import { NgStyle } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { ProjectStore } from '../../../state/ProjectStore';
 import { ColorsPerProjectDefinition } from '../../../utils/ColorsPerProjectDefinition';
 import { TechnologiesComponent } from '../technologies/technologies.component';
 
@@ -10,7 +11,8 @@ import { TechnologiesComponent } from '../technologies/technologies.component';
     TechnologiesComponent
   ],
   templateUrl: './project-layout.component.html',
-  styleUrl: './project-layout.component.scss'
+  styleUrl: './project-layout.component.scss',
+  providers: [ProjectStore]
 })
 export class ProjectLayoutComponent {
 

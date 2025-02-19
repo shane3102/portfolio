@@ -1,11 +1,14 @@
-import { Component, Input, Signal, signal } from '@angular/core';
-import { TechnologyChipComponent } from '../technology-chip/technology-chip.component';
 import { CommonModule } from '@angular/common';
+import { Component, Input, inject, signal } from '@angular/core';
+import { TechnologyChipComponent } from '../technology-chip/technology-chip.component';
+import { ProjectStore } from '../../../state/ProjectStore';
+import { TechnologyInfoComponent } from '../technology-info/technology-info.component';
 
 @Component({
   selector: 'app-technologies',
   imports: [
     TechnologyChipComponent,
+    TechnologyInfoComponent,
     CommonModule
   ],
   templateUrl: './technologies.component.html',
@@ -19,6 +22,8 @@ export class TechnologiesComponent {
   fixedChipNumber = 6
   currentShift = signal(0)
   decreasing = false;
+
+  projectStore = inject(ProjectStore)
 
   ngOnInit() {
     setInterval(
