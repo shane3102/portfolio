@@ -42,6 +42,18 @@ export class TechnologiesComponent {
     )
   }
 
+  next() {
+    if (this.currentShift() < this.technologies.length - this.fixedChipNumber) {
+      this.currentShift.update(it => it + 1)
+    }
+  }
+
+  previous() {
+    if (this.currentShift() > 0) {
+      this.currentShift.update(it => it - 1)
+    }
+  }
+
   getClassByShift() {
     return `technology-chips-${this.currentShift()}`
   }
