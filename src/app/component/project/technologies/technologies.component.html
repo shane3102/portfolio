@@ -1,7 +1,13 @@
-<div class="technology-chips" 
-    (mouseover)="hovering=true" (mouseleave)="hovering=false"
-    [ngClass]="getClassByShift()">
-    @for (technology of technologies; track $index) {
+<div class="content">
+    <div class="technology-chips" 
+        (mouseover)="hovering=true" (mouseleave)="hovering=false"
+        [ngClass]="getClassByShift()">
+        @for (technology of technologies; track $index) {
         <app-technology-chip [name]="technology"></app-technology-chip>
-    }
+        }
+    </div>
+    <app-technology-info style="width: 100%;"
+        [technology]="projectStore.highlightedTechnology ? projectStore.highlightedTechnology() : undefined"
+        [isTechnologyChanged]="projectStore.highlightedTechnologyChanged()">
+    </app-technology-info>
 </div>

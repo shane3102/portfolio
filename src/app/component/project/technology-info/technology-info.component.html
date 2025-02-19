@@ -1,0 +1,9 @@
+<div class="technology-name-wrapper">
+    <div class="vertical-line"></div>
+    <div class="technology-name" [ngClass]="!technology() || isTechnologyChanged() ? 'technology-name-hidden': ''">
+        <div>
+            {{technology()}}
+        </div>
+    </div>
+    <div class="vertical-line"></div>
+</div>

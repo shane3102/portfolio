@@ -1,0 +1,29 @@
+.technology-name-wrapper {
+    height: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.technology-name {
+    transition: height 125ms linear;
+    -webkit-transition: height 125ms linear;
+    -ms-transition: height 125ms linear;
+    height: 2em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.technology-name-hidden {
+    height: 0;
+}
+
+.vertical-line {
+    height: 0;
+    border-top: 0.1px solid white;
+    width: 85%;
+}

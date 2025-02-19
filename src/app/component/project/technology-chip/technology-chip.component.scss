@@ -19,6 +19,8 @@ $chip-padding-and-margin: 1vw;
     color: #232b2b;
     box-shadow: 0 0 0.5dvw white;
     transition: box-shadow 200ms ease-out;
+    -webkit-transition: box-shadow 200ms ease-out;
+    -ms-transition: box-shadow 200ms ease-out;
 }
 
 .chip:hover {

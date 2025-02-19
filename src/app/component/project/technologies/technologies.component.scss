@@ -1,5 +1,13 @@
 @import '../project-layout/project-layout.component.scss';
 
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
 .technology-chips {
     position: relative;
     display: flex; 
