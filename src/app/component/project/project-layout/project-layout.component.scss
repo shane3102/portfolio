@@ -1,3 +1,5 @@
+@use '../../../../styles';
+
 $project-layout-width-default: 35vw;
 $project-layout-width-min: 240px;
 $project-layout-width: max($project-layout-width-default, $project-layout-width-min);
@@ -7,9 +9,41 @@ $project-layout-width: max($project-layout-width-default, $project-layout-width-
     border-radius: calc($project-layout-width / 16);
     height: 70dvh;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    flex-direction: column;
     transition: box-shadow 250ms ease-out;
     box-shadow: 0 0 1vw dimgray inset;
     overflow: hidden;
+}
+
+.title {
+    font-size: 2em;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.short-description {
+    width: 85%;
+    height: 20%;
+    overflow: auto;
+    text-align: justify;
+    font-size: 1vw;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: styles.$background-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: styles.$color;
+    border-radius: 5px;
 }
