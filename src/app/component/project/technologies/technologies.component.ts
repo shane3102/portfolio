@@ -58,4 +58,8 @@ export class TechnologiesComponent {
     return `technology-chips-${this.currentShift()}`
   }
 
+  clearHighlightedTechnology() {
+    this.projectStore.changeHighlightedTechnology(undefined)
+  }
+
 }
