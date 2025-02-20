@@ -1,7 +1,8 @@
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
+import { project } from '../utils/GlobalDefinitions';
 
 type GlobalState = {
-    currentShownContent: 'illchess' | 'leon' | 'inbox-outbox' | 'CV',
+    currentShownContent: project,
     changingContent: boolean
 }
 
@@ -15,7 +16,7 @@ export const GlobalStore = signalStore(
     withState(initialState),
     withMethods(
         (store) => ({
-            changeShownContent: (shownContent: 'illchess' | 'leon' | 'inbox-outbox' | 'CV') => {
+            changeShownContent: (shownContent: project) => {
                 if (store.currentShownContent() != shownContent) {
                     patchState(store, { changingContent: true })
                     setTimeout(
