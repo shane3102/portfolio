@@ -31,7 +31,7 @@
     border-left: 1em solid green;
 }
 
-.technology-chips-wrapper:hover .triangle-right {
+.triangle-right-shown {
     left: calc(-1.1em + $project-layout-width);
 }
 
@@ -49,7 +49,7 @@
     border-right: 1em solid green;
 }
 
-.technology-chips-wrapper:hover .triangle-left {
+.triangle-left-shown {
     left: -0.9em;
 }
 
