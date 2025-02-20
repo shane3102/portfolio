@@ -3,5 +3,14 @@
     [ngStyle]="this.hover ? this.projectTitle ? {
         'box-shadow': '0 0 1vw '+getColorDefinition()+'  inset, 0 0 1vw '+getColorDefinition()     
     } : {} : {}">
+
+    <div class="title">
+        <b>{{projectTitle}}</b>
+    </div>
+
+    <div class="short-description">
+        {{shortProjectDescription}}
+    </div>
+
     <app-technologies [technologies]="technologies"></app-technologies>
 </div>
