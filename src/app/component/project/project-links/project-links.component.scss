@@ -1,0 +1,37 @@
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.whole-link {
+    font-size: max(1vw, 1em);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    transition: background-color 125ms linear, box-shadow 125ms linear;
+    -webkit-transition: background-color 125ms linear, box-shadow 125ms linear;
+    -ms-transition: background-color 125ms linear, box-shadow 125ms linear;
+}
+
+.whole-link:hover {
+    background-color: rgba(255,255,255,0.45);
+    box-shadow: 0 0 0.5em white;
+}
+
+.image-wrapper {
+    width: 1.25em;
+    height: 1.25em;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+}

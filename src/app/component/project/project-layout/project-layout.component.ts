@@ -4,12 +4,14 @@ import { ProjectStore } from '../../../state/ProjectStore';
 import { ColorsPerProjectDefinitions } from '../../../utils/ColorsPerProjectDefinitions';
 import { project } from '../../../utils/GlobalDefinitions';
 import { TechnologiesComponent } from '../technologies/technologies.component';
+import { ProjectLinksComponent } from '../project-links/project-links.component';
 
 @Component({
   selector: 'app-project-layout',
   imports: [
     NgStyle,
-    TechnologiesComponent
+    TechnologiesComponent,
+    ProjectLinksComponent
   ],
   templateUrl: './project-layout.component.html',
   styleUrl: './project-layout.component.scss',

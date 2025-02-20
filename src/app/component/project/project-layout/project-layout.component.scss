@@ -30,7 +30,7 @@ $project-layout-width: max($project-layout-width-default, $project-layout-width-
     height: 20%;
     overflow: auto;
     text-align: justify;
-    font-size: 1vw;
+    font-size: max(1vw, 1em);
 }
 
 ::-webkit-scrollbar {

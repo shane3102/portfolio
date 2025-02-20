@@ -1,0 +1,20 @@
+<div style="margin: 1em 7.5%">
+    Linki:
+    <ul>
+        @if(projectTitle) {
+            @for (linkInfo of ProjectDataDefinitions.getLinksPerProject(projectTitle); track $index) {
+                <li>
+                    <a class="whole-link" target="_blank" [href]="linkInfo.link">
+                        <div style="justify-self: center;">
+                            {{linkInfo.title}} 
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="/utils/external-link.svg">
+                        </div>
+                    </a>
+                </li>
+            }
+        }
+    </ul>
+</div>
+    
