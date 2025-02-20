@@ -17,6 +17,7 @@ import { TechnologiesComponent } from '../technologies/technologies.component';
 export class ProjectLayoutComponent {
 
   @Input() projectTitle?: "illchess" | "leon" | "inbox-outbox" | "CV"
+  @Input() technologies: string[] = []
 
   hover = false
 

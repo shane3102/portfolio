@@ -3,17 +3,5 @@
     [ngStyle]="this.hover ? this.projectTitle ? {
         'box-shadow': '0 0 1vw '+getColorDefinition()+'  inset, 0 0 1vw '+getColorDefinition()     
     } : {} : {}">
-    <app-technologies [technologies]="[
-            'Angular', 
-            'Typescript',
-            'Java',
-            'Kotlin',
-            'Spring Boot',
-            'Quarkus',
-            'MySql',
-            'Redis',
-            'RabbitMQ',
-            'PostgreSQL'
-            ]"
-            ></app-technologies>
+    <app-technologies [technologies]="technologies"></app-technologies>
 </div>

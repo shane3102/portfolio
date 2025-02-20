@@ -2,5 +2,19 @@
 <app-project-description-layout></app-project-description-layout>
 <router-outlet />
 <div style="display: flex; justify-content: center;">
-  <app-project-layout projectTitle="illchess"></app-project-layout>
+  <app-project-layout 
+    projectTitle="illchess" 
+    [technologies]="[
+      'Angular', 
+      'Typescript',
+      'Java',
+      'Kotlin',
+      'Spring Boot',
+      'Quarkus',
+      'MySql',
+      'Redis',
+      'RabbitMQ',
+      'PostgreSQL'
+    ]">
+  </app-project-layout>
 </div>
