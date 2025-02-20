@@ -1,4 +1,4 @@
-<div class="content">
+<div class="content" (mouseleave)=" clearHighlightedTechnology()">
     <div class="technology-chips-wrapper" (mouseover)="hovering=true" (mouseleave)="hovering=false">
         <div class="technology-chips" 
             [ngClass]="getClassByShift()"
@@ -7,8 +7,14 @@
                 <app-technology-chip [name]="technology"></app-technology-chip>
             }
         </div>
-        <div class="triangle triangle-left" [ngClass]="(technologies.length > fixedChipNumber && hovering) ? 'triangle-left-shown' : ''" (click)="previous()"></div>
-        <div class="triangle triangle-right" [ngClass]="(technologies.length > fixedChipNumber && hovering) ? 'triangle-right-shown' : ''" (click)="next()"></div>
+        <div class="triangle triangle-left" 
+            [ngClass]="(technologies.length > fixedChipNumber && hovering) ? 'triangle-left-shown' : ''" 
+            [style.border-right]="this.currentShift() == 0 ? '1em solid gray' : ''"
+            (click)="previous()"></div>
+        <div class="triangle triangle-right"
+            [ngClass]="(technologies.length > fixedChipNumber && hovering) ? 'triangle-right-shown' : ''" 
+            [style.border-left]="currentShift() == technologies.length - fixedChipNumber ? '1em solid gray' : ''"
+            (click)="next()"></div>
     </div>
     <app-technology-info style="width: 100%;"
         [technology]="projectStore.highlightedTechnology ? projectStore.highlightedTechnology() : undefined"

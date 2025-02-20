@@ -17,10 +17,6 @@ export class TechnologyChipComponent {
   projectStore = inject(ProjectStore)
 
   changeHighlightedTechnology() {
-    if (this.name != (this.projectStore.highlightedTechnology ? this.projectStore.highlightedTechnology(): undefined)) {
-      this.projectStore.changeHighlightedTechnology(this.name)
-    } else {
-      this.projectStore.changeHighlightedTechnology(undefined)
-    }
+    this.projectStore.changeHighlightedTechnology(this.name)
   }
 }
