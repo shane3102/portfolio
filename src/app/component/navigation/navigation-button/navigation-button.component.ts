@@ -1,6 +1,7 @@
 import { NgStyle } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { ColorsPerProjectDefinition } from '../../../utils/ColorsPerProjectDefinition';
+import { ColorsPerProjectDefinitions } from '../../../utils/ColorsPerProjectDefinitions';
+import { project } from '../../../utils/GlobalDefinitions';
 
 @Component({
   selector: 'app-navigation-button',
@@ -10,12 +11,12 @@ import { ColorsPerProjectDefinition } from '../../../utils/ColorsPerProjectDefin
 })
 export class NavigationButtonComponent {
 
-  @Input() text?: 'illchess' | 'leon' | 'inbox-outbox' | 'CV' = undefined
+  @Input() text?: project = undefined
 
   hover = false
 
   getColorDefinition() {
-    return this.text ? ColorsPerProjectDefinition.getColorByProjectByTransparency(this.text) : 'white'
+    return this.text ? ColorsPerProjectDefinitions.getColorByProjectByTransparency(this.text) : 'white'
   }
 
 }

@@ -1,0 +1,1 @@
+export type project = "illchess" | "leon" | "inbox-outbox" | "CV"

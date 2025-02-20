@@ -1,4 +1,6 @@
-export class ColorsPerProjectDefinition {
+import { project } from "./GlobalDefinitions"
+
+export class ColorsPerProjectDefinitions {
 
     static colorDefinitions: Map<string, number[]> =  new Map(
         [
@@ -10,7 +12,7 @@ export class ColorsPerProjectDefinition {
     )
 
     public static getColorByProjectByTransparency(
-        contentIdentifier: 'illchess' | 'leon' | 'inbox-outbox' | 'CV',
+        contentIdentifier: project,
         transparency: number = 1
     ) {
         let foundColorDefinition = this.colorDefinitions.get(contentIdentifier)

@@ -1,7 +1,8 @@
 import { NgStyle } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ProjectStore } from '../../../state/ProjectStore';
-import { ColorsPerProjectDefinition } from '../../../utils/ColorsPerProjectDefinition';
+import { ColorsPerProjectDefinitions } from '../../../utils/ColorsPerProjectDefinitions';
+import { project } from '../../../utils/GlobalDefinitions';
 import { TechnologiesComponent } from '../technologies/technologies.component';
 
 @Component({
@@ -16,13 +17,13 @@ import { TechnologiesComponent } from '../technologies/technologies.component';
 })
 export class ProjectLayoutComponent {
 
-  @Input() projectTitle?: "illchess" | "leon" | "inbox-outbox" | "CV"
+  @Input() projectTitle?: project
   @Input() shortProjectDescription: string = "DODAJ OPIS"
   @Input() technologies: string[] = []
 
   hover = false
 
   getColorDefinition() {
-    return this.projectTitle ? ColorsPerProjectDefinition.getColorByProjectByTransparency(this.projectTitle) : 'white'
+    return this.projectTitle ? ColorsPerProjectDefinitions.getColorByProjectByTransparency(this.projectTitle) : 'white'
   }
 }

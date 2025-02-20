@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { GlobalStore } from '../../../state/GlobalStore';
-import { ColorsPerProjectDefinition } from '../../../utils/ColorsPerProjectDefinition';
+import { ColorsPerProjectDefinitions } from '../../../utils/ColorsPerProjectDefinitions';
 import { NavigationButtonComponent } from '../navigation-button/navigation-button.component';
 import { NavigationSeparatorComponent } from '../navigation-separator/navigation-separator.component';
 import { NgStyle } from '@angular/common';
+import { project } from '../../../utils/GlobalDefinitions';
 
 @Component({
   selector: 'app-navigation-sidebar',
@@ -19,7 +20,7 @@ export class NavigationSidebarComponent {
 
   globalState = inject(GlobalStore)
 
-  changeShownContent(shownContent: 'illchess' | 'leon' | 'inbox-outbox' | 'CV') {
+  changeShownContent(shownContent: project) {
     this.globalState.changeShownContent(shownContent)
   }
 
@@ -28,7 +29,7 @@ export class NavigationSidebarComponent {
     if (this.globalState.changingContent()) {
       return 'white'
     }
-    let foundColor = ColorsPerProjectDefinition.getColorByProjectByTransparency(
+    let foundColor = ColorsPerProjectDefinitions.getColorByProjectByTransparency(
       this.globalState.currentShownContent(),
       0.63
     )
