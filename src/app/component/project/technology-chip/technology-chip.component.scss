@@ -1,11 +1,11 @@
-@import '../project-layout/project-layout.component.scss';
+@use '../project-layout/project-layout.component' as project-layout;
 
 $chip-padding-and-margin: 1vw;
 
 .chip {
     height: 2em;
     box-sizing: border-box;
-    width: calc($project-layout-width / 6 - $chip-padding-and-margin);
+    width: calc(project-layout.$project-layout-width / 6 - $chip-padding-and-margin);
     background-color: white;
     border-radius: 1em;
     display: flex;

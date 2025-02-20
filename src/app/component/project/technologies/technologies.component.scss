@@ -1,5 +1,5 @@
-@import '../project-layout/project-layout.component.scss';
-@import '../../../../styles.scss';
+@use '../../../../styles';
+@use '../project-layout/project-layout.component' as project-layout;
 
 .content {
     display: flex;
@@ -20,8 +20,8 @@
 .triangle-right {
     position: absolute;
     top: 1em;
-    left: $project-layout-width;
-    border-left: 1em solid $background-color;
+    left:project-layout.$project-layout-width;
+    border-left: 1em solid styles.$background-color;
     border-right: 1em solid transparent;
     border-top: 1em solid transparent;
     border-bottom: 1em solid transparent;
@@ -32,7 +32,7 @@
 }
 
 .triangle-right-shown {
-    left: calc(-1.1em + $project-layout-width);
+    left: calc(-1.1em + project-layout.$project-layout-width);
 }
 
 .triangle-left {
@@ -40,7 +40,7 @@
     top: 1em;
     left: -2em;
     border-left: 1em solid transparent;
-    border-right: 1em solid $background-color;
+    border-right: 1em solid styles.$background-color;
     border-top: 1em solid transparent;
     border-bottom: 1em solid transparent;
 }
@@ -63,7 +63,7 @@
     justify-self: start;
     justify-content: left;
     align-items: center;
-    width: $project-layout-width;
+    width: project-layout.$project-layout-width;
     height: 4em;
     left: 0;
     transition: left 500ms linear;
@@ -80,25 +80,25 @@
 
 // forgive me i have sinned 
 .technology-chips-1 {
-    left: calc(-1 *($project-layout-width / 6))
+    left: calc(-1 *(project-layout.$project-layout-width / 6))
 }
 
 .technology-chips-2 {
-    left: calc(-2 *($project-layout-width / 6))
+    left: calc(-2 *(project-layout.$project-layout-width / 6))
 }
 
 .technology-chips-3 {
-    left: calc(-3 *($project-layout-width / 6))
+    left: calc(-3 *(project-layout.$project-layout-width / 6))
 }
 
 .technology-chips-4 {
-    left: calc(-4 *($project-layout-width / 6))
+    left: calc(-4 *(project-layout.$project-layout-width / 6))
 }
 
 .technology-chips-5 {
-    left: calc(-5 *($project-layout-width / 6))
+    left: calc(-5 *(project-layout.$project-layout-width / 6))
 }
 
 .technology-chips-6 {
-    left: calc(-6 *($project-layout-width / 6))
+    left: calc(-6 *(project-layout.$project-layout-width / 6))
 }
