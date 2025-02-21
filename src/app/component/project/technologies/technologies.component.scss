@@ -1,12 +1,13 @@
 @use '../../../../styles';
 @use '../project-layout/project-layout.component' as project-layout;
 
+$technologies-height: calc(0.25 * project-layout.$project-layout-height);
+$technology-chips-height: calc(0.5 * $technologies-height);
+$triangle-height: calc($technology-chips-height * 0.25);
+
 .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: 100%;
+    height: $technologies-height;
 }
 
 .triangle {
@@ -19,12 +20,12 @@
 
 .triangle-right {
     position: absolute;
-    top: 1em;
+    top: calc($technology-chips-height/2 - $triangle-height);
     left:project-layout.$project-layout-width;
     border-left: 1em solid styles.$background-color;
     border-right: 1em solid transparent;
-    border-top: 1em solid transparent;
-    border-bottom: 1em solid transparent;
+    border-top: $triangle-height solid transparent;
+    border-bottom: $triangle-height solid transparent;
 }
 
 .triangle-right:hover {
@@ -37,12 +38,12 @@
 
 .triangle-left {
     position: absolute;
-    top: 1em;
+    top: calc($technology-chips-height/2 - $triangle-height);
     left: -2em;
     border-left: 1em solid transparent;
     border-right: 1em solid styles.$background-color;
-    border-top: 1em solid transparent;
-    border-bottom: 1em solid transparent;
+    border-top: $triangle-height solid transparent;
+    border-bottom: $triangle-height solid transparent;
 }
 
 .triangle-left:hover {
@@ -54,7 +55,7 @@
 }
 
 .technology-chips-wrapper {
-    position: relative
+    position: relative;
 }
 
 .technology-chips {
@@ -64,18 +65,11 @@
     justify-content: left;
     align-items: center;
     width: project-layout.$project-layout-width;
-    height: 4em;
+    height: $technology-chips-height;
     left: 0;
     transition: left 500ms linear;
     -webkit-transition: left 500ms linear;
     -ms-transition: left 500ms linear;
-}
-
-.technology-chips:hover {
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -o-animation-play-state: paused;
-    animation-play-state: paused;
 }
 
 // forgive me i have sinned 
