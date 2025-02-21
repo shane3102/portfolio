@@ -1,6 +1,6 @@
 @use '../../../../styles';
 
-$project-layout-width-default: 35vw;
+$project-layout-width-default: 25vw;
 $project-layout-width-min: 240px;
 $project-layout-width-max: 600px;
 $project-layout-width: clamp($project-layout-width-min, $project-layout-width-default, $project-layout-width-max);

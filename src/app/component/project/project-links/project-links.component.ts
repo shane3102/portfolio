@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { project } from '../../../utils/GlobalDefinitions';
-import { ProjectDataDefinitions } from '../../../utils/ProjectDataDefinitions';
+import { LinkInfo, ProjectDataDefinitions } from '../../../utils/ProjectDataDefinitions';
 
 type lol = "illchess" | "leon" | "inbox-outbox" | "CV"
 
@@ -14,11 +14,6 @@ export class ProjectLinksComponent {
 
   ProjectDataDefinitions = ProjectDataDefinitions
 
-  @Input() projectTitle?: project
+  @Input() projectLinks?: LinkInfo[]
 
-}
-
-export interface LinkInfo {
-  link: string,
-  title: string
 }

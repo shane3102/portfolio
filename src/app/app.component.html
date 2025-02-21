@@ -1,23 +1,13 @@
-<app-navigation-sidebar></app-navigation-sidebar>
+<!-- TODO do usunięcia/przepisania całość <app-navigation-sidebar></app-navigation-sidebar> -->
 <app-project-description-layout></app-project-description-layout>
 <router-outlet />
-<div style="display: flex; justify-content: center;">
+<div style="display: flex; justify-content: space-around;">
   <app-project-layout 
     projectTitle="illchess" 
     shortProjectDescription="
       Aplikacja do grania w szachy online. Charaktryzuje się zastosowaniem architektury mikroserwisowej (heksagonalnej), DDD oraz CQRS.
-    "
-    [technologies]="[
-      'Angular', 
-      'Typescript',
-      'Java',
-      'Kotlin',
-      'Spring Boot',
-      'Quarkus',
-      'MySql',
-      'Redis',
-      'RabbitMQ',
-      'PostgreSQL'
-    ]">
+    ">
   </app-project-layout>
+  <app-project-layout projectTitle="leon"></app-project-layout>
+  <app-project-layout projectTitle="inbox-outbox"></app-project-layout>
 </div>
