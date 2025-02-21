@@ -1,13 +1,16 @@
 @use '../project-layout/project-layout.component' as project-layout;
+@use '../technologies/technologies.component.scss' as technologies;
 
 $chip-padding-and-margin: 1vw;
+$chip-height: calc(technologies.$technology-chips-height * 0.75);
+$chip-width: calc(project-layout.$project-layout-width / 6 - $chip-padding-and-margin);
 
 .chip {
-    height: 2em;
+    height: $chip-height;
+    width: $chip-width;
     box-sizing: border-box;
-    width: calc(project-layout.$project-layout-width / 6 - $chip-padding-and-margin);
     background-color: white;
-    border-radius: 1em;
+    border-radius: min($chip-height, $chip-width);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,8 +38,8 @@ $chip-padding-and-margin: 1vw;
 }
 
 .image {
-    height: 1.75em;
-    width: 1.75em;
+    height: calc(min($chip-height, $chip-width) * 0.7);
+    width: calc(min($chip-height, $chip-width) * 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
