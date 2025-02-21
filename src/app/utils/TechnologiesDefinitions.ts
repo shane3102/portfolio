@@ -1,5 +1,7 @@
+import { technology } from "./GlobalDefinitions"
+
 export class TechnologiesDefinitions {
-    static technologiesDefinitions: Map<string, TechnologyInfo> = new Map(
+    static technologiesDefinitions: Map<technology, TechnologyInfo> = new Map(
         [
             // Language
             ["Java", { logo: "/logos/java.svg", link: "https://www.java.com/pl/" }],
@@ -19,11 +21,11 @@ export class TechnologiesDefinitions {
         ]
     )
 
-    public static getSvgByTechnology(technology: string | undefined) {
+    public static getSvgByTechnology(technology: technology | undefined) {
         return technology ? this.technologiesDefinitions.get(technology)?.logo : undefined
     }
 
-    public static getLinkByTechnology(technology: string | undefined) {
+    public static getLinkByTechnology(technology: technology | undefined) {
         return technology ? this.technologiesDefinitions.get(technology)?.link : undefined
     }
 }

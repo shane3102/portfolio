@@ -1,6 +1,7 @@
 import { Component, Input, inject } from '@angular/core';
 import { TechnologiesDefinitions } from '../../../utils/TechnologiesDefinitions';
 import { ProjectStore } from '../../../state/ProjectStore';
+import { technology } from '../../../utils/GlobalDefinitions';
 
 @Component({
   selector: 'app-technology-chip',
@@ -12,7 +13,7 @@ export class TechnologyChipComponent {
 
   TechnologiesDefinitions = TechnologiesDefinitions
 
-  @Input() name?: string
+  @Input() name?: technology
 
   projectStore = inject(ProjectStore)
 

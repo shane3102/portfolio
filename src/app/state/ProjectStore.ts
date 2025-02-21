@@ -1,8 +1,9 @@
 import { patchState, signalStore, withMethods, withState } from "@ngrx/signals"
+import { technology } from "../utils/GlobalDefinitions"
 
 
 type ProjectState = {
-    highlightedTechnology?: string
+    highlightedTechnology?: technology
     highlightedTechnologyChanged: boolean
 }
 
@@ -15,7 +16,7 @@ export const ProjectStore = signalStore(
     withState(initialState),
     withMethods(
         (store) => ({
-            changeHighlightedTechnology: (newHighlightedTechnology?: string) => {
+            changeHighlightedTechnology: (newHighlightedTechnology?: technology) => {
                 patchState(store, { highlightedTechnologyChanged: true })
                 if (store.highlightedTechnology == undefined) {
                     patchState(

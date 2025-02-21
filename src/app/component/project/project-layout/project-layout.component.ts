@@ -2,7 +2,7 @@ import { NgStyle } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ProjectStore } from '../../../state/ProjectStore';
 import { ColorsPerProjectDefinitions } from '../../../utils/ColorsPerProjectDefinitions';
-import { project } from '../../../utils/GlobalDefinitions';
+import { project, technology } from '../../../utils/GlobalDefinitions';
 import { TechnologiesComponent } from '../technologies/technologies.component';
 import { ProjectLinksComponent } from '../project-links/project-links.component';
 
@@ -21,7 +21,7 @@ export class ProjectLayoutComponent {
 
   @Input() projectTitle?: project
   @Input() shortProjectDescription: string = "DODAJ OPIS"
-  @Input() technologies: string[] = []
+  @Input() technologies: technology[] = []
 
   hover = false
 
