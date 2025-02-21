@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, input } from '@angular/core';
 import { TechnologiesDefinitions } from '../../../utils/TechnologiesDefinitions';
+import { technology } from '../../../utils/GlobalDefinitions';
 
 @Component({
   selector: 'app-technology-info',
@@ -14,7 +15,7 @@ export class TechnologyInfoComponent {
 
   TechnologiesDefinitions = TechnologiesDefinitions
 
-  technology = input<string | undefined>()
+  technology = input<technology | undefined>()
   isTechnologyChanged = input<boolean>()
 
 }

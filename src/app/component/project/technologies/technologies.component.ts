@@ -3,6 +3,7 @@ import { Component, Input, inject, signal } from '@angular/core';
 import { TechnologyChipComponent } from '../technology-chip/technology-chip.component';
 import { ProjectStore } from '../../../state/ProjectStore';
 import { TechnologyInfoComponent } from '../technology-info/technology-info.component';
+import { technology } from '../../../utils/GlobalDefinitions';
 
 @Component({
   selector: 'app-technologies',
@@ -16,7 +17,7 @@ import { TechnologyInfoComponent } from '../technology-info/technology-info.comp
 })
 export class TechnologiesComponent {
 
-  @Input() technologies: string[] = []
+  @Input() technologies: technology[] = []
 
   hovering: boolean = false
   fixedChipNumber = 6
