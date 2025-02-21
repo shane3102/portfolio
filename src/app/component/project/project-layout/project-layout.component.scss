@@ -4,10 +4,14 @@ $project-layout-width-default: 35vw;
 $project-layout-width-min: 240px;
 $project-layout-width: max($project-layout-width-default, $project-layout-width-min);
 
+$project-layout-height-default: 70dvh;
+$project-layout-height-min: 350px;
+$project-layout-height: max($project-layout-height-default, $project-layout-height-min);
+
 .project-content {
     width: $project-layout-width;
     border-radius: calc($project-layout-width / 16);
-    height: 70dvh;
+    height: $project-layout-height;
     display: flex;
     justify-content: start;
     align-items: center;

@@ -1,5 +1,7 @@
 <div style="margin: 1em 7.5%">
-    Linki:
+    <div class="link-info">
+        Linki:
+    </div>
     <ul>
         @if(projectTitle) {
             @for (linkInfo of ProjectDataDefinitions.getLinksPerProject(projectTitle); track $index) {
