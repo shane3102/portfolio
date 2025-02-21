@@ -1,18 +1,22 @@
-<div class="project-content"
-    (mouseover)="hover=true" (mouseleave)="hover=false"
-    [ngStyle]="this.hover ? this.projectTitle ? {
-        'box-shadow': '0 0 1vw '+getColorDefinition()+'  inset, 0 0 1vw '+getColorDefinition()     
-    } : {} : {}">
+@if (projectTitle && ProjectDataDefinitions.getProjectDataDefinition(projectTitle); as definition) {
+    <div class="project-content" 
+        (mouseover)="hover=true" (mouseleave)="hover=false" 
+        [ngStyle]="this.hover ? this.projectTitle ? {
+            'box-shadow': '0 0 1vw '+getColorDefinition()+' inset, 0 0 1vw '+getColorDefinition()     
+        } : {} : {}">
 
-    <div class="title">
-        <b>{{projectTitle}}</b>
+        <div class="title">
+            <b>{{projectTitle}}</b>
+        </div>
+
+        <div class="short-description">
+            {{shortProjectDescription}}
+        </div>
+
+        <app-technologies
+            [technologies]="definition? definition!.technologies : []"
+            class="technologies"></app-technologies>
+
+        <app-project-links [projectLinks]="definition.links" class="links"></app-project-links>
     </div>
-
-    <div class="short-description">
-        {{shortProjectDescription}}
-    </div>
-
-    <app-technologies [technologies]="technologies" class="technologies"></app-technologies>
-
-    <app-project-links [projectTitle]="projectTitle" class="links"></app-project-links>
-</div>
+}

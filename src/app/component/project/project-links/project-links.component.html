@@ -3,8 +3,8 @@
         Linki:
     </div>
     <ul>
-        @if(projectTitle) {
-            @for (linkInfo of ProjectDataDefinitions.getLinksPerProject(projectTitle); track $index) {
+        @if(projectLinks) {
+            @for (linkInfo of projectLinks; track $index) {
                 <li>
                     <a class="whole-link" target="_blank" [href]="linkInfo.link">
                         <div style="justify-self: center;">
