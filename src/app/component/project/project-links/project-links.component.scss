@@ -1,3 +1,10 @@
+@use '../project-layout/project-layout.component.scss' as project-layout;
+
+ul {
+    margin: 0;
+    padding-left: calc(project-layout.$project-layout-width * 0.075);
+}
+
 a {
     text-decoration: inherit;
     color: inherit;
@@ -9,12 +16,12 @@ a {
 
 .whole-link {
     font-size: max(1vw, 1em);
-    width: 100%;
+    width: calc(project-layout.$project-layout-width * 0.75);
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 0.5em;
-    margin: 0.5em;
+    margin: calc(project-layout.$project-layout-width * 0.025);
     transition: background-color 125ms linear, box-shadow 125ms linear;
     -webkit-transition: background-color 125ms linear, box-shadow 125ms linear;
     -ms-transition: background-color 125ms linear, box-shadow 125ms linear;
