@@ -23,7 +23,6 @@ export class ProjectLayoutComponent {
   ProjectDataDefinitions = ProjectDataDefinitions
 
   @Input() projectTitle?: project
-  @Input() shortProjectDescription: string = "DODAJ OPIS"
 
   hover = false
 
