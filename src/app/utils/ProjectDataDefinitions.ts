@@ -8,6 +8,7 @@ export class ProjectDataDefinitions {
                 'illchess',
                 {
                     name: 'illchess',
+                    shortDescription: 'Aplikacja do grania w szachy online. Charaktryzuje się zastosowaniem architektury mikroserwisowej (heksagonalnej), DDD oraz CQRS.',
                     technologies: ['Kotlin', 'Java', 'Spring Boot', 'Quarkus', 'RabbitMQ', 'Redis', 'MySql', 'Angular', 'Typescript'],
                     links: [
                         {link: 'https://illchess.shane3102.pl/#/', title: 'Aplikacja'}, 
@@ -19,6 +20,7 @@ export class ProjectDataDefinitions {
                 'inbox-outbox',
                 {
                     name: 'inbox-outbox',
+                    shortDescription: 'Biblioteka wspierająca implementacje wzorca inbox lub outbox. Posiada wersje dla frameworków Spring Boot i Quarkus.',
                     technologies: ['Kotlin', 'Spring Boot', 'Quarkus'],
                     links: [
                         {link: 'https://nexus.shane3102.pl/#browse/search=keyword%3Dinbox-outbox', title: 'Nexus'},
@@ -30,6 +32,7 @@ export class ProjectDataDefinitions {
                 'leon',
                 {
                     name: 'leon',
+                    shortDescription: 'Aplikacja ankietowa ze zmienną prezentacją pytań. Projekt wykonywany w ramach parcy dyplomowej. Posiada prostą, monolityczną architekturę.',
                     technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Angular', 'Typescript'],
                     links: [
                         {link: 'https://leon.shane3102.pl/#/', title: 'Aplikacja'}, 
@@ -48,6 +51,7 @@ export class ProjectDataDefinitions {
 
 export interface ProjectInfo {
     name: project,
+    shortDescription: string,
     technologies: technology[]
     links: LinkInfo[]
 }
