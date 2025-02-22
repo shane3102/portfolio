@@ -1,0 +1,28 @@
+@use '../../../../styles';
+
+.content {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: max(3vw, 3em);
+    margin: max(3vh, 10px) 10px;
+}
+
+.projects {
+    width: 100%;
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.vertical-line {
+    width: 40vw;
+    height: 0;
+    border: 1px solid styles.$color;
+}

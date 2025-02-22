@@ -11,6 +11,7 @@ $project-layout-height-max: 650px;
 $project-layout-height: clamp($project-layout-height-min, $project-layout-height-default, $project-layout-height-max);
 
 .project-content {
+    margin: calc($project-layout-height * 0.01);
     width: $project-layout-width;
     border-radius: calc($project-layout-width / 16);
     height: $project-layout-height;
@@ -36,7 +37,7 @@ $project-layout-height: clamp($project-layout-height-min, $project-layout-height
     min-height: calc($project-layout-height * 0.2);
     overflow: auto;
     text-align: justify;
-    font-size: calc($project-layout-width * 0.035);
+    font-size: max(0.7em, calc($project-layout-width * 0.035));
 }
 
 .links {
