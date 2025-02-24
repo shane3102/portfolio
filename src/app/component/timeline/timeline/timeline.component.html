@@ -1,0 +1,10 @@
+@if(years && years.length!=0) {
+    <div class="whole-timeline-section">
+        @for (year of years; track $index; let last = $last) {
+            <div>{{year}}</div>
+            @if(!$last) {
+                <div class="year-section" [style.width]="getYearWidth()"></div>
+            }
+        }
+    </div>
+}
