@@ -1,0 +1,21 @@
+@use '../../../styles';
+
+.content {
+    width: 90dvw;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    min-width: 15%;
+    font-size: max(3vw, 2em);
+    margin: max(3vh, 10px) 10px;
+}
+
+.vertical-line {
+    width: 35%;
+    height: 0;
+    border: 1px solid styles.$color;
+}
