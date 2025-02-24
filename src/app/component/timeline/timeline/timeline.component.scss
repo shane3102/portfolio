@@ -5,10 +5,23 @@
     justify-content: center;
     align-items: center;
     user-select: none;
-    margin: 1em 0;
+    margin: 0.5em 0;
 }
 
 .year-section {
     height: 0;
     border-top: 1px solid styles.$color;
+}
+
+.work-periods {
+    position: relative; 
+    width: calc(100% - 2em);
+    margin-left: 1em; 
+    margin-right: 1em;
+    height: 2em;
+}
+
+.period {
+    position: absolute;
+    bottom: 0;
 }
