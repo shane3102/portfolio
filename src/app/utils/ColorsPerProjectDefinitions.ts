@@ -2,9 +2,8 @@ import { project } from "./GlobalDefinitions"
 
 export class ColorsPerProjectDefinitions {
 
-    static colorDefinitions: Map<string, number[]> =  new Map(
+    static colorDefinitions: Map<project, number[]> =  new Map(
         [
-            ['CV', [128, 128, 128]],
             ['illchess', [150, 75, 0]],
             ['leon', [186, 255, 57]],
             ['inbox-outbox', [173, 216, 230]]
