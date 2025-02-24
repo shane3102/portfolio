@@ -1,0 +1,44 @@
+@use '../../../../styles';
+
+$height: 0.5em;
+$total-height: calc(2 * $height + 0.5px);
+
+.whole {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: $total-height;
+    min-width: none;
+}
+
+.first {
+    border-left: 1px solid styles.$color;
+    border-top: 1px solid styles.$color;
+    align-self: flex-end;
+    height: $height;
+    border-radius: $height 0 0 0;
+}
+
+.second {
+    border-bottom: 1px solid styles.$color;
+    border-right: 1px solid styles.$color;
+    align-self: flex-start;
+    height: $height;
+    border-radius: 0 0 $height 0;
+}
+
+.third {
+    border-bottom: 1px solid styles.$color;
+    border-left: 1px solid styles.$color;
+    align-self: flex-start;
+    border-radius: 0 0 0 $height;
+    height: $height;
+}
+
+.fourth {
+    border-top: 1px solid styles.$color;
+    border-right: 1px solid styles.$color;
+    align-self: flex-end;
+    border-radius: 0 $height 0 0;
+    height: $height;
+}
