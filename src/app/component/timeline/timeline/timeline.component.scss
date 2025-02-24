@@ -1,0 +1,14 @@
+@use '../../../../styles';
+
+.whole-timeline-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    margin: 1em 0;
+}
+
+.year-section {
+    height: 0;
+    border-top: 1px solid styles.$color;
+}
