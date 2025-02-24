@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { TimelineWorkPeriodComponent } from '../timeline-work-period/timeline-work-period.component';
-import { TimelinePeriod, periods } from '../../../utils/TimelinePeriodsDefinitions';
+import { TimelinePeriod, educationPeriods, workPeriods } from '../../../utils/TimelinePeriodsDefinitions';
+import { TimelineWorkPeriodComponent } from '../timeline-period/timeline-work-period/timeline-work-period.component';
+import { TimelineEducationPeriodComponent } from "../timeline-period/timeline-education-period/timeline-education-period.component";
 
 @Component({
   selector: 'app-timeline',
   imports: [
-    TimelineWorkPeriodComponent
-  ],
+    TimelineWorkPeriodComponent,
+    TimelineEducationPeriodComponent
+],
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.scss'
 })
@@ -16,7 +18,8 @@ export class TimelineComponent {
   to: number = (new Date()).getFullYear()
   years?: number[]
 
-  periods = periods
+  workPeriods = workPeriods
+  educationPeriods = educationPeriods
 
   ngOnInit() {
     this.years = []
