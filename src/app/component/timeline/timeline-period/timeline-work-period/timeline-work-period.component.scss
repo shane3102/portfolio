@@ -1,13 +1,11 @@
-@use '../../../../styles';
-
-$height: 0.5em;
-$total-height: calc(2 * $height + 0.5px);
+@use '../../../../../styles';
+@use '../timeline-period-shared-style.scss' as shared-style;
 
 .whole {
     position: relative;
     display: flex;
     justify-content: center;
-    height: $total-height;
+    height: shared-style.$total-height;
     min-width: none;
 }
 
@@ -15,30 +13,30 @@ $total-height: calc(2 * $height + 0.5px);
     border-left: 1px solid styles.$color;
     border-top: 1px solid styles.$color;
     align-self: flex-end;
-    height: $height;
-    border-radius: $height 0 0 0;
+    height: shared-style.$height;
+    border-radius: shared-style.$height 0 0 0;
 }
 
 .second {
     border-bottom: 1px solid styles.$color;
     border-right: 1px solid styles.$color;
     align-self: flex-start;
-    height: $height;
-    border-radius: 0 0 $height 0;
+    height: shared-style.$height;
+    border-radius: 0 0 shared-style.$height 0;
 }
 
 .third {
     border-bottom: 1px solid styles.$color;
     border-left: 1px solid styles.$color;
     align-self: flex-start;
-    border-radius: 0 0 0 $height;
-    height: $height;
+    border-radius: 0 0 0 shared-style.$height;
+    height: shared-style.$height;
 }
 
 .fourth {
     border-top: 1px solid styles.$color;
     border-right: 1px solid styles.$color;
     align-self: flex-end;
-    border-radius: 0 $height 0 0;
-    height: $height;
+    border-radius: 0 shared-style.$height 0 0;
+    height: shared-style.$height;
 }

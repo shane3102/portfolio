@@ -13,7 +13,7 @@
     border-top: 1px solid styles.$color;
 }
 
-.work-periods {
+.periods {
     position: relative; 
     width: calc(100% - 2em);
     margin-left: 1em; 
@@ -21,7 +21,12 @@
     height: 2em;
 }
 
-.period {
+.period-work {
     position: absolute;
     bottom: 0;
+}
+
+.period-education {
+    position: absolute;
+    top: 0;
 }

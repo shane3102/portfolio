@@ -1,7 +1,7 @@
 @if(years && years.length!=0) {
-    <div class="work-periods">
-        @for(period of periods; track $index) {
-            <div class="period" [style.left]="getLeftShiftByTimelinePeriod(period)" [style.width]="getWidthByTimelinePeriod(period)">
+    <div class="periods">
+        @for(period of workPeriods; track $index) {
+            <div class="period-work" [style.left]="getLeftShiftByTimelinePeriod(period)" [style.width]="getWidthByTimelinePeriod(period)">
                 <app-timeline-work-period [wholeWidth]="getWidthByTimelinePeriod(period)"></app-timeline-work-period>
             </div>
         }
@@ -12,6 +12,13 @@
             @if (!$last) {
                 <div class="year-section" [style.width]="getYearWidth()"></div>
             }
+        }
+    </div>
+    <div class="periods">
+        @for(period of educationPeriods; track $index) {
+            <div class="period-education" [style.left]="getLeftShiftByTimelinePeriod(period)" [style.width]="getWidthByTimelinePeriod(period)">
+                <app-timeline-education-period [wholeWidth]="getWidthByTimelinePeriod(period)"></app-timeline-education-period>
+            </div>
         }
     </div>
 }
