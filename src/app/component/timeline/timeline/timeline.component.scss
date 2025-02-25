@@ -1,16 +1,43 @@
 @use '../../../../styles';
+@use '../timeline-shared-style' as shared-style;
 
 .whole-timeline-section {
     display: flex;
     justify-content: center;
     align-items: center;
     user-select: none;
-    margin: 0.5em 0;
+    margin: shared-style.$total-height 0;
 }
 
-.year-section {
-    height: 0;
+.year-section-bottom {
+    height: calc(shared-style.$total-height / 2);
     border-top: 1px solid styles.$color;
+    border-left: 1px solid styles.$color;
+    border-right: 1px solid styles.$color;
+}
+
+.year-section-top {
+    height: calc(shared-style.$total-height / 2);
+    border-bottom: 1px solid styles.$color;
+    border-left: 1px solid styles.$color;
+    border-right: 1px solid styles.$color;
+}
+
+$year-info-height: calc(shared-style.$total-height* 0.75);
+
+.year-info {
+    height: 0;
+    font-size: $year-info-height;
+    text-align: center; 
+    position: relative; 
+}
+
+.year-info-even { 
+    top: calc(shared-style.$total-height / 2 + 5px);
+}
+
+.year-info-odd {
+    top: calc(shared-style.$total-height / -2)
 }
 
 .periods {
