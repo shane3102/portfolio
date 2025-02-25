@@ -7,11 +7,12 @@
         }
     </div>
     <div class="whole-timeline-section">
-        @for (year of years; track $index; let last = $last) {
-            <div style="width: 32px; font-size: 0.75em; text-align: center;">{{year}}</div>
-            @if (!$last) {
-                <div class="year-section" [style.width]="getYearWidth()"></div>
-            }
+        @for (year of years; track $index; let odd = $odd) {
+            <div>
+                <div class="year-info" [style.width]="getYearWidth()" [ngClass]="odd ? 'year-info-odd' : 'year-info-even'">{{year}}</div>
+                <div class="year-section-top" [style.width]="getYearWidth()"></div>
+                <div class="year-section-bottom" [style.width]="getYearWidth()"></div>
+            </div>
         }
     </div>
     <div class="periods">
