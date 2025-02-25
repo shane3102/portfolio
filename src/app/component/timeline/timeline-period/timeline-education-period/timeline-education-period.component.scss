@@ -10,33 +10,33 @@
 }
 
 .first {
-    border-left: 1px solid styles.$color;
-    border-bottom: 1px solid styles.$color;
+    border-left: shared-style.$brace-thickness solid styles.$color;
+    border-bottom: shared-style.$brace-thickness solid styles.$color;
     align-self: flex-start;
-    height: shared-style.$height;
-    border-radius: 0 0 0 shared-style.$height;
+    height: shared-style.$brace-height;
+    border-radius: 0 0 0 shared-style.$brace-height;
 }
 
 .second {
-    border-top: 1px solid styles.$color;
-    border-right: 1px solid styles.$color;
+    border-top: shared-style.$brace-thickness solid styles.$color;
+    border-right: shared-style.$brace-thickness solid styles.$color;
     align-self: flex-end;
-    height: shared-style.$height;
-    border-radius: 0 shared-style.$height 0 0;
+    height: shared-style.$brace-height;
+    border-radius: 0 shared-style.$brace-height 0 0;
 }
 
 .third {
-    border-top: 1px solid styles.$color;
-    border-left: 1px solid styles.$color;
+    border-top: shared-style.$brace-thickness solid styles.$color;
+    border-left: shared-style.$brace-thickness solid styles.$color;
     align-self: flex-end;
-    border-radius: shared-style.$height 0 0 0;
-    height: shared-style.$height;
+    border-radius: shared-style.$brace-height 0 0 0;
+    height: shared-style.$brace-height;
 }
 
 .fourth {
-    border-bottom: 1px solid styles.$color;
-    border-right: 1px solid styles.$color;
+    border-bottom: shared-style.$brace-thickness solid styles.$color;
+    border-right: shared-style.$brace-thickness solid styles.$color;
     align-self: flex-start;
-    border-radius: 0 0 shared-style.$height 0;
-    height: shared-style.$height;
+    border-radius: 0 0 shared-style.$brace-height 0;
+    height: shared-style.$brace-height;
 }
