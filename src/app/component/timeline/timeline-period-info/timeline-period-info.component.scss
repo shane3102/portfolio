@@ -1,0 +1,12 @@
+@use '../timeline-shared-style' as shared-style;
+
+.content {
+    height: shared-style.$timeline-info-height;
+    border-radius: calc(shared-style.$timeline-info-height / 16);
+    box-shadow: 0 0 1vw dimgray inset, 0 0 0 dimgray;
+    transition: box-shadow 250ms ease-out;
+}
+
+.content:hover {
+    box-shadow: 0 0 1vw dimgray inset, 0 0 1vw dimgray;
+}

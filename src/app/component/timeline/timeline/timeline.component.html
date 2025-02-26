@@ -1,6 +1,11 @@
 @if(years && years.length!=0) {
     <div class="periods">
         @for(period of workPeriods; track $index) {
+            <div class="period-info-work" 
+                [style.left]="getTimelinePeriodInfoShiftByTimelinePeriod(period)" 
+                [style.width]="timelinePeriodInfoWidth">
+                <app-timeline-period-info [width]="timelinePeriodInfoWidth"></app-timeline-period-info>
+            </div>
             <div class="period-work" [style.left]="getLeftShiftByTimelinePeriod(period)" [style.width]="getWidthByTimelinePeriod(period)">
                 <app-timeline-work-period [wholeWidth]="getWidthByTimelinePeriod(period)"></app-timeline-work-period>
             </div>
@@ -19,6 +24,11 @@
         @for(period of educationPeriods; track $index) {
             <div class="period-education" [style.left]="getLeftShiftByTimelinePeriod(period)" [style.width]="getWidthByTimelinePeriod(period)">
                 <app-timeline-education-period [wholeWidth]="getWidthByTimelinePeriod(period)"></app-timeline-education-period>
+            </div>
+            <div class="period-info-education" 
+                [style.left]="getTimelinePeriodInfoShiftByTimelinePeriod(period)" 
+                [style.width]="timelinePeriodInfoWidth">
+                <app-timeline-period-info [width]="timelinePeriodInfoWidth"></app-timeline-period-info>
             </div>
         }
     </div>
