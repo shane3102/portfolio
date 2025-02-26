@@ -45,7 +45,7 @@ $year-info-height: calc(shared-style.$total-height* 0.75);
     width: calc(100% - 2em);
     margin-left: 1em; 
     margin-right: 1em;
-    height: 2em;
+    height: calc(shared-style.$timeline-info-height + shared-style.$total-height);
 }
 
 .period-work {
@@ -56,4 +56,13 @@ $year-info-height: calc(shared-style.$total-height* 0.75);
 .period-education {
     position: absolute;
     top: 0;
+}
+
+.period-info-work {
+    position: absolute;
+}
+
+.period-info-education {
+    position: absolute;
+    bottom: 0;
 }

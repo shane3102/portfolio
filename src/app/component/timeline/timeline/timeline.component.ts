@@ -3,12 +3,14 @@ import { TimelinePeriod, educationPeriods, workPeriods } from '../../../utils/Ti
 import { TimelineWorkPeriodComponent } from '../timeline-period/timeline-work-period/timeline-work-period.component';
 import { TimelineEducationPeriodComponent } from "../timeline-period/timeline-education-period/timeline-education-period.component";
 import { NgClass } from '@angular/common';
+import { TimelinePeriodInfoComponent } from '../timeline-period-info/timeline-period-info.component';
 
 @Component({
   selector: 'app-timeline',
   imports: [
     TimelineWorkPeriodComponent,
     TimelineEducationPeriodComponent,
+    TimelinePeriodInfoComponent,
     NgClass
 ],
   templateUrl: './timeline.component.html',
@@ -20,6 +22,8 @@ export class TimelineComponent {
   to: number = (new Date()).getFullYear()
   years?: number[]
   timelineWidth: string = '90dvw'
+  
+  timelinePeriodInfoWidth: string = '14dvw'
 
   workPeriods = workPeriods
   educationPeriods = educationPeriods
@@ -46,6 +50,12 @@ export class TimelineComponent {
   getWidthByTimelinePeriod(timelinePeriod: TimelinePeriod) {
     let daysBetweenDates = this.daysBetweenDates(timelinePeriod.from, timelinePeriod.to ? timelinePeriod.to : new Date())
     return `calc(${daysBetweenDates/365} * ${this.getYearWidth()})`
+  }
+
+  getTimelinePeriodInfoShiftByTimelinePeriod(timelinePeriod: TimelinePeriod) {
+    return `calc(${this.getLeftShiftByTimelinePeriod(timelinePeriod)} 
+            + calc(${this.getWidthByTimelinePeriod(timelinePeriod)} / 2) 
+            - calc(${this.timelinePeriodInfoWidth} / 2))`
   }
 
   daysBetweenDates(first: Date, second: Date) {        
