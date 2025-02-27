@@ -2,7 +2,7 @@
     <div class="image">
         <img [src]="timelinePeriod.logo">
     </div>
-    <div class="time-period" [style.font-size]="'calc(' + width + ' / 16)'">
+    <div class="time-period" [style.font-size]="'min(calc(' + width + ' / 16), 14px'">
         {{timelinePeriod.from | date: 'dd.MM.yyyy'}} 
         - 
         @if(timelinePeriod.to) {
@@ -11,4 +11,9 @@
             Obecnie
         }
     </div>
+    @if(timelinePeriod.title) {
+        <div class="work-title" [style.font-size]="'min(calc(' + width + ' / 16), 14px'">
+            <b>{{timelinePeriod.title}}</b>
+        </div>
+    }
 </div>
