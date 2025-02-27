@@ -10,12 +10,12 @@
 
 .title {
     min-width: 15%;
-    font-size: max(3vw, 2em);
-    margin: max(3vh, 10px) 10px;
+    font-size: clamp(3vw, 2em, 4vw);
+    margin: clamp(3vw, 10px, 4vw) 10px;
 }
 
 .vertical-line {
-    width: 35%;
+    width: 30%;
     height: 0;
     border: 1px solid styles.$color;
 }
