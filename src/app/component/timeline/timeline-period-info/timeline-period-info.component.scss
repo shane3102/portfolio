@@ -14,20 +14,26 @@
 }
 
 .time-period {
+    margin: 2.5% 5%;
+    text-align: center;
+}
+
+.work-title {
+    margin: 2.5% 5%;
     text-align: center;
 }
 
 .image { 
     width: 100%;
-    height: calc(shared-style.$timeline-info-height / 4);
+    height: calc(shared-style.$timeline-info-height / 2.5);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .image img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 75%;
+    max-height: 75%;
     pointer-events: none;
     user-select: none;
 }
