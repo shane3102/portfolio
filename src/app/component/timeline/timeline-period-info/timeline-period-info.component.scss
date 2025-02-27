@@ -5,8 +5,29 @@
     border-radius: calc(shared-style.$timeline-info-height / 16);
     box-shadow: 0 0 1vw dimgray inset, 0 0 0 dimgray;
     transition: box-shadow 250ms ease-out;
+    display: flex;
+    flex-direction: column;
 }
 
 .content:hover {
     box-shadow: 0 0 1vw dimgray inset, 0 0 1vw dimgray;
+}
+
+.time-period {
+    text-align: center;
+}
+
+.image { 
+    width: 100%;
+    height: calc(shared-style.$timeline-info-height / 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    max-width: 90%;
+    max-height: 90%;
+    pointer-events: none;
+    user-select: none;
 }
