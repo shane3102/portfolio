@@ -1,0 +1,66 @@
+@use '../../../styles';
+
+$image-size: 70dvh;
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.image {
+    width: $image-size;
+    height: $image-size;
+    border-radius: calc($image-size / 2);
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 48%; 
+    margin: 0 1%
+}
+
+.vertical-line {
+    height: 80%;
+    border-left: 1px solid styles.$color;
+}
+
+.name {
+    font-size: 3em;
+    width: 100%;
+}
+
+.website-image {
+    width: 2em;
+    height: 2em;
+}
+
+.website-image img {
+    width: 80%;
+    height: 80%;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
