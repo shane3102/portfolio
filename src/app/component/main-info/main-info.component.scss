@@ -2,11 +2,25 @@
 
 $image-size: 70dvh;
 
+.content-wrapper {
+    height: 100dvh;
+}
+
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100dvh;
+    animation: 750ms ease-out slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .image-wrapper {
