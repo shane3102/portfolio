@@ -1,0 +1,47 @@
+@use '../../../../styles';
+
+.content {
+    height: 2em;
+    border-radius: 1em;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1vw styles.$color inset, 0 0 0 styles.$color;
+    transition: box-shadow 125ms ease-out;
+    -webkit-transition: box-shadow 125ms linear;
+    -ms-transition: box-shadow 125ms linear;
+    user-select: none;
+    padding: 0 1vw;
+    margin: 1vh 0;
+    margin-right: 0.5vw;
+}
+
+.content:hover {
+    box-shadow: 0 0 0 styles.$color inset, 0 0 1vw styles.$color;
+}
+
+.website-image {
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+
+.website-image img {
+    width: 80%;
+    height: 80%;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+@media (width < 900px) {
+    .info {
+        display: none;
+    }
+}

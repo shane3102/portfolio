@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ProjectsComponent } from './component/project/projects/projects.component';
 import { TimelineSectionComponent } from './component/timeline/timeline-section/timeline-section.component';
-import { MainInfoComponent } from './component/main-info/main-info.component';
+import { MainInfoSectionComponent } from './component/main-info/main-info-section/main-info-section.component';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ import { MainInfoComponent } from './component/main-info/main-info.component';
     RouterOutlet, 
     ProjectsComponent,
     TimelineSectionComponent,
-    MainInfoComponent
+    MainInfoSectionComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
