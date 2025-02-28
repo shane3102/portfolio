@@ -1,6 +1,6 @@
-@use '../../../styles';
+@use '../../../../styles';
 
-$image-size: 70dvh;
+$image-size: min(70dvh, 40vw);
 
 .content-wrapper {
     height: 100dvh;
@@ -62,19 +62,10 @@ $image-size: 70dvh;
     width: 100%;
 }
 
-.website-image {
-    width: 2em;
-    height: 2em;
-}
-
-.website-image img {
-    width: 80%;
-    height: 80%;
-}
-
 .links {
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
 }
