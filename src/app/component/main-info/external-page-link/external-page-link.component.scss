@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 1vw styles.$color inset, 0 0 0 styles.$color;
+    box-shadow: 0 0 1em styles.$color inset, 0 0 0 styles.$color;
     transition: box-shadow 125ms ease-out;
     -webkit-transition: box-shadow 125ms linear;
     -ms-transition: box-shadow 125ms linear;
@@ -18,7 +18,7 @@
 }
 
 .content:hover {
-    box-shadow: 0 0 0 styles.$color inset, 0 0 1vw styles.$color;
+    box-shadow: 0 0 0 styles.$color inset, 0 0 1em styles.$color;
 }
 
 .website-image {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ProjectsComponent } from './component/project/projects/projects.component';
+import { ProjectsSectionComponent } from './component/project/projects-section/projects-section.component';
 import { TimelineSectionComponent } from './component/timeline/timeline-section/timeline-section.component';
 import { MainInfoSectionComponent } from './component/main-info/main-info-section/main-info-section.component';
 
@@ -8,7 +8,7 @@ import { MainInfoSectionComponent } from './component/main-info/main-info-sectio
   selector: 'app-root',
   imports: [
     RouterOutlet, 
-    ProjectsComponent,
+    ProjectsSectionComponent,
     TimelineSectionComponent,
     MainInfoSectionComponent
   ],

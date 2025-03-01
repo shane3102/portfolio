@@ -3,14 +3,14 @@ import { ProjectLayoutComponent } from '../project-layout/project-layout.compone
 import { SectionTitleComponent } from '../../section-title/section-title.component';
 
 @Component({
-  selector: 'app-projects',
+  selector: 'app-projects-section',
   imports: [
     ProjectLayoutComponent,
     SectionTitleComponent
   ],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  templateUrl: './projects-section.component.html',
+  styleUrl: './projects-section.component.scss'
 })
-export class ProjectsComponent {
+export class ProjectsSectionComponent {
 
 }
