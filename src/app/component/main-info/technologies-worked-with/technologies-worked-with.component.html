@@ -1,0 +1,20 @@
+<div (mouseleave)="clearHighlightedTechnology()">
+    <div class="title-info">
+        {{titleWithInfo}}
+    </div>
+    <div class="technologies">
+        @for (technology of technologies; track $index) {
+            <app-technology-chip [name]="technology"></app-technology-chip>
+        }
+    </div>
+    <div class="technology-info" [style.width]="projectStore.highlightedTechnologyChanged() || !(projectStore.highlightedTechnology ? projectStore.highlightedTechnology() : undefined) ? '0' : '150px'">
+        <div>
+            {{projectStore.highlightedTechnology ? projectStore.highlightedTechnology() : undefined}}
+        </div>
+        <div>
+            <a class="image-wrapper" target="_blank" [href]="TechnologiesDefinitions.getLinkByTechnology(projectStore.highlightedTechnology ? projectStore.highlightedTechnology() : undefined)">
+                <img src="/utils/external-link.svg">
+            </a>
+        </div>
+    </div>
+</div>

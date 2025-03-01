@@ -18,6 +18,8 @@ export class TechnologiesDefinitions {
             ["MySql", { logo: "/logos/technologies/mysql.svg", link: "https://www.mysql.com/" }],
             ["Redis", { logo: "/logos/technologies/redis.svg", link: "https://redis.io/" }],
             ["RabbitMQ", { logo: "/logos/technologies/rabbitmq.svg", link: "https://www.rabbitmq.com/" }],
+            ["Docker", { logo: "/logos/technologies/docker.svg", link: "https://www.docker.com/" }],
+            ["Kafka", { logo: "/logos/technologies/kafka.svg", link: "https://kafka.apache.org/" }],
         ]
     )
 
