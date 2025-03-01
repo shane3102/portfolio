@@ -1,0 +1,33 @@
+@use '../../../../styles';
+
+.elements {
+    justify-self: center;
+    width: 90%;
+    height: 2em;
+    border-radius: 1em;
+    border: 1px solid pink;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em 0;
+}
+
+.element {
+    width: 50%;
+    box-shadow: 0 0 1em styles.$color inset, 0 0 0 styles.$color;
+    height: 100%;
+    user-select: none;
+    transition: box-shadow 125ms linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element:hover {
+    box-shadow: 0 0 0 styles.$color inset, 0 0 1em styles.$color;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+}

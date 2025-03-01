@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { technology } from '../../../utils/GlobalDefinitions';
 import { ExternalPageLinkComponent } from '../external-page-link/external-page-link.component';
 import { TechnologiesWorkedWithComponent } from '../technologies-worked-with/technologies-worked-with.component';
+import { PageElementsComponent } from '../page-elements/page-elements.component';
 
 @Component({
   selector: 'app-main-info-section',
   imports: [
     ExternalPageLinkComponent,
-    TechnologiesWorkedWithComponent
+    TechnologiesWorkedWithComponent,
+    PageElementsComponent
   ],
   templateUrl: './main-info-section.component.html',
   styleUrl: './main-info-section.component.scss'

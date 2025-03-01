@@ -3,6 +3,10 @@
 $background-color: #232b2b;
 $color: white;
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Roboto", serif;

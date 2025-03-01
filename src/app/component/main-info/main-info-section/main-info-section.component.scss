@@ -58,7 +58,7 @@ $image-size: min(70dvh, 40vw);
 }
 
 .name {
-    font-size: 3em;
+    font-size: clamp(2em, 3vw, 3em);
     width: 100%;
 }
 
@@ -68,4 +68,18 @@ $image-size: min(70dvh, 40vw);
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+}
+
+@media (width < 600px) {   
+    .image-wrapper {
+        display: none
+    }
+
+    .vertical-line {
+        display: none;
+    }
+
+    .info {
+        width: 80%
+    }
 }
