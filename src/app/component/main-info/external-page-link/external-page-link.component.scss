@@ -3,7 +3,7 @@
 .content {
     height: 2em;
     border-radius: 1em;
-    width: 10vw;
+    width: min(10vw, 90px);
     display: flex;
     justify-content: center;
     align-items: center;

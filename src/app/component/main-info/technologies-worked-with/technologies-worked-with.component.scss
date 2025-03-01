@@ -1,0 +1,49 @@
+@use '../../../../styles';
+
+.technologies {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.title-info {
+    margin: 1vh 0;
+}
+
+.technology-info {
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 125ms linear;
+    border-right: 1px solid styles.$color;
+    border-left: 1px solid styles.$color;
+    text-wrap: nowrap;
+    overflow: hidden;
+    margin: 1vh 0;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 0.25em;
+    margin: 0.5em;
+    transition: background-color 125ms linear, box-shadow 125ms linear;
+    -webkit-transition: background-color 125ms linear, box-shadow 125ms linear;
+    -ms-transition: background-color 125ms linear, box-shadow 125ms linear;
+}
+
+.image-wrapper:hover {
+    background-color: rgba(255,255,255, 0.45);
+    box-shadow: 0 0 0.5em white;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    pointer-events: none;
+    user-select: none;
+}

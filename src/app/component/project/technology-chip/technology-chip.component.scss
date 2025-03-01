@@ -2,8 +2,8 @@
 @use '../technologies/technologies.component.scss' as technologies;
 
 $chip-padding-and-margin: 1vw;
-$chip-height: calc(technologies.$technology-chips-height * 0.75);
 $chip-width: calc(project-layout.$project-layout-width / 6 - $chip-padding-and-margin);
+$chip-height: min($chip-width, calc(technologies.$technology-chips-height * 0.75));
 
 .chip {
     height: $chip-height;

@@ -1,2 +1,2 @@
 export type project = "illchess" | "leon" | "inbox-outbox"
-export type technology = 'Java' | 'Kotlin' | 'Typescript' | 'Angular' | 'Spring Boot' | 'Quarkus' | 'PostgreSQL' | 'MySql' | 'Redis' | 'RabbitMQ'
+export type technology = 'Java' | 'Kotlin' | 'Typescript' | 'Angular' | 'Spring Boot' | 'Quarkus' | 'PostgreSQL' | 'MySql' | 'Redis' | 'RabbitMQ' | 'Docker' | 'Kafka'
