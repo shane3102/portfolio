@@ -5,7 +5,7 @@ $project-layout-width-min: 240px;
 $project-layout-width-max: 600px;
 $project-layout-width: clamp($project-layout-width-min, $project-layout-width-default, $project-layout-width-max);
 
-$project-layout-height-default: 60dvh;
+$project-layout-height-default: 65dvh;
 $project-layout-height-min: 350px;
 $project-layout-height-max: 650px;
 $project-layout-height: clamp($project-layout-height-min, $project-layout-height-default, $project-layout-height-max);
