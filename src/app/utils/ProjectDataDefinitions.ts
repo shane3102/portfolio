@@ -32,7 +32,7 @@ export class ProjectDataDefinitions {
                 'leon',
                 {
                     name: 'leon',
-                    shortDescription: 'Aplikacja ankietowa ze zmienną prezentacją pytań. Projekt wykonywany w ramach parcy dyplomowej. Posiada prostą, monolityczną architekturę.',
+                    shortDescription: 'Aplikacja ankietowa ze zmienną prezentacją pytań. Projekt wykonywany w ramach pracy dyplomowej. Posiada prostą, monolityczną architekturę.',
                     technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker', 'Angular', 'Typescript'],
                     links: [
                         { link: 'https://leon.shane3102.pl/#/', title: 'Aplikacja' },
