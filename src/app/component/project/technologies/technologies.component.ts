@@ -59,8 +59,8 @@ export class TechnologiesComponent {
     return `technology-chips-${this.currentShift()}`
   }
 
-  clearHighlightedTechnology() {
-    this.projectStore.changeHighlightedTechnology(undefined)
+  changeHighlightedTechnology(name: technology | undefined) {
+    this.projectStore.changeHighlightedTechnology(name)
   }
 
 }

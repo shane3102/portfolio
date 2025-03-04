@@ -1,7 +1,6 @@
-import { Component, Input, inject } from '@angular/core';
-import { TechnologiesDefinitions } from '../../../utils/TechnologiesDefinitions';
-import { ProjectStore } from '../../../state/ProjectStore';
+import { Component, Input, output } from '@angular/core';
 import { technology } from '../../../utils/GlobalDefinitions';
+import { TechnologiesDefinitions } from '../../../utils/TechnologiesDefinitions';
 
 @Component({
   selector: 'app-technology-chip',
@@ -13,11 +12,7 @@ export class TechnologyChipComponent {
 
   TechnologiesDefinitions = TechnologiesDefinitions
 
-  @Input() name?: technology
+  @Input() name!: technology
 
-  projectStore = inject(ProjectStore)
-
-  changeHighlightedTechnology() {
-    this.projectStore.changeHighlightedTechnology(this.name)
-  }
+  hovered = output<technology>()
 }

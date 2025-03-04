@@ -1,10 +1,10 @@
-<div (mouseleave)="clearHighlightedTechnology()">
+<div (mouseleave)="changeHighlightedTechnology(undefined)">
     <div class="title-info">
         {{titleWithInfo}}
     </div>
     <div class="technologies">
         @for (technology of technologies; track $index) {
-            <app-technology-chip [name]="technology"></app-technology-chip>
+            <app-technology-chip [name]="technology" (hovered)="changeHighlightedTechnology($event)"></app-technology-chip>
         }
     </div>
     <div class="technology-info" [style.width]="projectStore.highlightedTechnologyChanged() || !(projectStore.highlightedTechnology ? projectStore.highlightedTechnology() : undefined) ? '0' : '150px'">

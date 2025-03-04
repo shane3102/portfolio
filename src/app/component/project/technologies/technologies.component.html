@@ -1,10 +1,10 @@
-<div class="content" (mouseleave)=" clearHighlightedTechnology()">
+<div class="content" (mouseleave)="changeHighlightedTechnology(undefined)">
     <div class="technology-chips-wrapper" (mouseover)="hovering=true" (mouseleave)="hovering=false">
         <div class="technology-chips" 
             [ngClass]="getClassByShift()"
             [style.justify-content]="technologies.length < fixedChipNumber? 'center': 'left'">
             @for (technology of technologies; track $index) {
-                <app-technology-chip [name]="technology"></app-technology-chip>
+                <app-technology-chip [name]="technology" (hovered)="changeHighlightedTechnology($event)"></app-technology-chip>
             }
         </div>
         <div class="triangle triangle-left" 

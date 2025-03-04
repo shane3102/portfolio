@@ -22,7 +22,7 @@ export class TechnologiesWorkedWithComponent {
 
   projectStore = inject(ProjectStore)
 
-  clearHighlightedTechnology() {
-    this.projectStore.changeHighlightedTechnology(undefined)
+  changeHighlightedTechnology(name: technology | undefined) {
+    this.projectStore.changeHighlightedTechnology(name)
   }
 }
