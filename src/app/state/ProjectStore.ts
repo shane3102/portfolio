@@ -3,7 +3,7 @@ import { technology } from "../utils/GlobalDefinitions"
 
 
 type ProjectState = {
-    highlightedTechnology?: technology
+    highlightedTechnology: technology | undefined
     highlightedTechnologyChanged: boolean
 }
 

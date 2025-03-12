@@ -7,12 +7,12 @@
             <app-technology-chip [name]="technology" (hovered)="changeHighlightedTechnology($event)"></app-technology-chip>
         }
     </div>
-    <div class="technology-info" [style.width]="projectStore.highlightedTechnologyChanged() || !(projectStore.highlightedTechnology ? projectStore.highlightedTechnology() : undefined) ? '0' : '150px'">
+    <div class="technology-info" [style.width]="projectStore.highlightedTechnologyChanged() || !projectStore.highlightedTechnology() ? '0' : '150px'">
         <div>
-            {{projectStore.highlightedTechnology ? projectStore.highlightedTechnology() : undefined}}
+            {{projectStore.highlightedTechnology()}}
         </div>
         <div>
-            <a class="image-wrapper" target="_blank" [href]="TechnologiesDefinitions.getLinkByTechnology(projectStore.highlightedTechnology ? projectStore.highlightedTechnology() : undefined)">
+            <a class="image-wrapper" target="_blank" [href]="TechnologiesDefinitions.getLinkByTechnology(projectStore.highlightedTechnology())">
                 <img src="/utils/external-link.svg">
             </a>
         </div>
