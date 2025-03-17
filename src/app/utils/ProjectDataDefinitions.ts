@@ -23,8 +23,8 @@ export class ProjectDataDefinitions {
                     shortDescription: 'Biblioteka wspierająca implementacje wzorca inbox lub outbox. Posiada wersje dla frameworków Spring Boot i Quarkus.',
                     technologies: ['Kotlin', 'Spring Boot', 'Quarkus'],
                     links: [
-                        { link: 'https://nexus.shane3102.pl/#browse/search=keyword%3Dinbox-outbox', title: 'Nexus' },
-                        { link: 'https://github.com/shane3102/inbox-outbox', title: 'Repozytorium' }
+                        { link: 'https://github.com/shane3102/inbox-outbox', title: 'Repozytorium' },
+                        { link: 'https://reposilite.shane3102.pl/#/releases/pl/shane3102/messaging', title: 'Artefakty (Reposilite)' }
                     ]
                 }
             ],
