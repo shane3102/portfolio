@@ -19,8 +19,8 @@ export class MainInfoSectionComponent {
   imageSource: string = "/photos/photo.jpg"
   loaded: boolean = false
 
-  commonTechnologies: technology[] = ['Java', 'Spring Boot', 'Docker', 'PostgreSQL', 'Kafka']
-  hadExperienceTechnologies: technology[] = ['Kotlin', 'Quarkus', 'Redis', 'RabbitMQ', 'Angular', 'Typescript', 'MySql']
+  commonTechnologies: technology[] = ['Java', 'Kotlin', 'Spring Boot', 'Docker', 'PostgreSQL', 'Kafka']
+  hadExperienceTechnologies: technology[] = ['Quarkus', 'Redis', 'RabbitMQ', 'Angular', 'Typescript', 'MySql', 'MongoDB']
 
   ngOnInit() {
     let img = new Image()

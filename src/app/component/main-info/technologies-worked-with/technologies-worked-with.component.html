@@ -1,13 +1,17 @@
-<div (mouseleave)="changeHighlightedTechnology(undefined)">
+<div (mouseleave)="changeHighlightedTechnology(undefined, 0)">
     <div class="title-info">
         {{titleWithInfo}}
     </div>
     <div class="technologies">
         @for (technology of technologies; track $index) {
-            <app-technology-chip [name]="technology" (hovered)="changeHighlightedTechnology($event)"></app-technology-chip>
+            <app-technology-chip [name]="technology" (hovered)="changeHighlightedTechnology($event, $index)"></app-technology-chip>
         }
     </div>
-    <div class="technology-info" [style.width]="projectStore.highlightedTechnologyChanged() || !projectStore.highlightedTechnology() ? '0' : '150px'">
+    <!-- <div class="technology-info" > -->
+    <div 
+        class="technology-info" 
+        [class.technology-info-active]="!projectStore.highlightedTechnologyChanged() && projectStore.highlightedTechnology()" 
+        [ngClass]="projectStore.highlightedTechnology() ? 'technology-info-'+highlightedTechnologyPosition : ''">
         <div>
             {{projectStore.highlightedTechnology()}}
         </div>

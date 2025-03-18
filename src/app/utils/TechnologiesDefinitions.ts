@@ -16,6 +16,7 @@ export class TechnologiesDefinitions {
             // Other
             ["PostgreSQL", { logo: "/logos/technologies/postgresql.svg", link: "https://www.postgresql.org/" }],
             ["MySql", { logo: "/logos/technologies/mysql.svg", link: "https://www.mysql.com/" }],
+            ["MongoDB", { logo: "/logos/technologies/mongodb.svg", link: "https://www.mongodb.com/" }],
             ["Redis", { logo: "/logos/technologies/redis.svg", link: "https://redis.io/" }],
             ["RabbitMQ", { logo: "/logos/technologies/rabbitmq.svg", link: "https://www.rabbitmq.com/" }],
             ["Docker", { logo: "/logos/technologies/docker.svg", link: "https://www.docker.com/" }],

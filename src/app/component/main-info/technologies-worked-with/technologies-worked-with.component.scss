@@ -1,4 +1,9 @@
 @use '../../../../styles';
+@use '../../project/technology-chip/technology-chip.component.scss' as technology-chip-styles;
+
+$chip-total-width: calc(technology-chip-styles.$chip-width + technology-chip-styles.$chip-padding-and-margin);
+$highlighted-technology-width: 150px;
+
 
 .technologies {
     display: flex;
@@ -7,19 +12,6 @@
 }
 
 .title-info {
-    margin: 1vh 0;
-}
-
-.technology-info {
-    height: 1.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: width 125ms linear;
-    border-right: 1px solid styles.$color;
-    border-left: 1px solid styles.$color;
-    text-wrap: nowrap;
-    overflow: hidden;
     margin: 1vh 0;
 }
 
@@ -46,4 +38,61 @@
     max-height: 100%;
     pointer-events: none;
     user-select: none;
+}
+
+.technology-info {
+    position: relative;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 125ms linear, left 125ms linear;
+    border-right: 1px solid styles.$color;
+    border-left: 1px solid styles.$color;
+    text-wrap: nowrap;
+    overflow: hidden;
+    margin: 1vh 0;
+    left: 0;
+    width: 0;
+}
+
+.technology-info-active {
+    width: $highlighted-technology-width;
+}
+
+// TODO forgive me i have sinned again
+.technology-info-1 {
+    left: calc(1 * $chip-total-width);
+}
+
+.technology-info-2 {
+    left: calc(2 * $chip-total-width);
+}
+
+.technology-info-3 {
+    left: calc(3 * $chip-total-width);
+}
+
+.technology-info-4 {
+    left: calc(4 * $chip-total-width);
+}
+
+.technology-info-5 {
+    left: calc(5 * $chip-total-width);
+}
+
+.technology-info-6 {
+    left: calc(6 * $chip-total-width);
+}
+
+.technology-info-7 {
+    left: calc(7 * $chip-total-width);
+}
+
+.technology-info-8 {
+    left: calc(8 * $chip-total-width);
+}
+
+.technology-info-9 {
+    left: calc(9 * $chip-total-width);
 }
