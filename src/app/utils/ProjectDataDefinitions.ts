@@ -9,7 +9,7 @@ export class ProjectDataDefinitions {
                 {
                     name: 'illchess',
                     shortDescription: 'Aplikacja do grania w szachy online. Charaktryzuje się zastosowaniem architektury mikroserwisowej (heksagonalnej), DDD oraz CQRS.',
-                    technologies: ['Kotlin', 'Java', 'Spring Boot', 'Quarkus', 'RabbitMQ', 'Redis', 'MySql', 'Docker', 'Angular', 'Typescript'],
+                    technologies: ['Kotlin', 'Java', 'Spring Boot', 'Quarkus', 'RabbitMQ', 'Redis', 'MySql', 'MongoDB', 'Docker', 'Angular', 'Typescript'],
                     links: [
                         { link: 'https://illchess.shane3102.pl/#/', title: 'Aplikacja' },
                         { link: 'https://github.com/shane3102/illchess', title: 'Repozytorium' }
