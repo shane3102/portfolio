@@ -12,17 +12,6 @@ $label-font-size: clamp(1vh, 1em, 3vh);
     justify-content: center;
     align-items: center;
     height: 100dvh;
-    animation: 750ms ease-out slideInFromLeft;
-}
-
-@keyframes slideInFromLeft {
-    0% {
-        transform: translateY(-100%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
 }
 
 .image-wrapper {
@@ -37,6 +26,17 @@ $label-font-size: clamp(1vh, 1em, 3vh);
     height: $image-size;
     border-radius: calc($image-size / 2);
     overflow: hidden;
+    animation: 750ms ease-out slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .image img {
@@ -51,7 +51,18 @@ $label-font-size: clamp(1vh, 1em, 3vh);
     align-items: center;
     flex-direction: column;
     width: 48%;
-    margin: 0 1%
+    margin: 0 1%;
+    animation: 750ms ease-out slideInFromTop;
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .vertical-line {
