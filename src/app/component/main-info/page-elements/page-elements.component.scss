@@ -1,6 +1,12 @@
 @use '../../../../styles';
+@use '../main-info-section/main-info-section.component.scss' as main-info-section-styles;
+
+.label {
+    font-size: main-info-section-styles.$label-font-size;
+}
 
 .elements {
+    font-size: main-info-section-styles.$label-font-size;
     justify-self: center;
     width: 90%;
     height: 2em;

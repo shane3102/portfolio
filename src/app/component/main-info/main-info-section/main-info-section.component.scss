@@ -1,6 +1,7 @@
 @use '../../../../styles';
 
 $image-size: min(70dvh, 40vw);
+$label-font-size: clamp(1vh, 1em, 3vh);
 
 .content-wrapper {
     height: 100dvh;
@@ -18,6 +19,7 @@ $image-size: min(70dvh, 40vw);
     0% {
         transform: translateY(-100%);
     }
+
     100% {
         transform: translateX(0);
     }
@@ -48,7 +50,7 @@ $image-size: min(70dvh, 40vw);
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 48%; 
+    width: 48%;
     margin: 0 1%
 }
 
@@ -58,8 +60,22 @@ $image-size: min(70dvh, 40vw);
 }
 
 .name {
-    font-size: clamp(2em, 3vw, 3em);
+    font-size: clamp(3vh, 3vw, 7vh);
     width: 100%;
+}
+
+.title {
+    width: 100%;
+    font-size: clamp(2vh, 1em, 4vh);
+}
+
+.location {
+    width: 100%;
+    font-size: clamp(2.25vh, 1.25em, 4.25vh);
+    margin: 0.5em 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 .links {
@@ -70,7 +86,7 @@ $image-size: min(70dvh, 40vw);
     width: 100%;
 }
 
-@media (width < 600px) {   
+@media (width < 600px) {
     .image-wrapper {
         display: none
     }
