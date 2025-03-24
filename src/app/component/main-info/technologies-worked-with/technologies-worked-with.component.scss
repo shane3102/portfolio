@@ -1,5 +1,6 @@
 @use '../../../../styles';
 @use '../../project/technology-chip/technology-chip.component.scss' as technology-chip-styles;
+@use '../main-info-section/main-info-section.component.scss' as main-info-section-styles;
 
 $chip-total-width: calc(technology-chip-styles.$chip-width + technology-chip-styles.$chip-padding-and-margin);
 $highlighted-technology-width: 150px;
@@ -12,6 +13,7 @@ $highlighted-technology-width: 150px;
 }
 
 .title-info {
+    font-size: main-info-section-styles.$label-font-size;
     margin: 1vh 0;
 }
 

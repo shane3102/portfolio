@@ -1,7 +1,9 @@
 @use '../../../../styles';
 
+$height: clamp(3vh, 2em, 6vh);
+
 .content {
-    height: 2em;
+    height: $height;
     border-radius: 1em;
     width: min(10vw, 90px);
     display: flex;
@@ -22,8 +24,8 @@
 }
 
 .website-image {
-    width: 2em;
-    height: 2em;
+    width: $height;
+    height: $height;
     display: flex;
     justify-content: center;
     align-items: center;
