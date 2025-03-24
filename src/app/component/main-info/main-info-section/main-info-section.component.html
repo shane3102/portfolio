@@ -1,30 +1,34 @@
 <div class="content-wrapper">
-    @if (loaded) {    
-        <div class="content">
-            <div class="image-wrapper">
+    <div class="content">
+        <div class="image-wrapper">
+            @if(loaded) {
                 <div class="image">
                     <img src="/photos/photo.jpg">
                 </div>
-            </div>
-            <div class="vertical-line"></div>
-            <div class="info">
-                <div class="name">
-                    <b>Bartłomiej Kucharczyk</b>
+            } @else {
+                <div style="display: flex; justify-content: center; align-items: center; height: 100dvh;">
+                    <app-spinner></app-spinner>
                 </div>
-                <div class="title">Programista Backend</div>
-                <div class="location">
-                    <img style="height: 1em; width: 1em;" src="/utils/location-pin.svg">&nbsp;
-                    <b>Warszawa, Polska</b>
-                </div>
-                <div class="links">
-                    <app-external-page-link name="Github" image="/logos/websites/github.svg" externalLink="https://github.com/shane3102"></app-external-page-link>
-                    <app-external-page-link name="Linkedin" image="/logos/websites/linkedin.svg" externalLink="https://www.linkedin.com/in/bartłomiej-kucharczyk"></app-external-page-link>
-                    <app-external-page-link name="CV" image="/utils/external-link.svg" externalLink="https://docs.google.com/document/d/1aKcYIXCtjwz7GOCjC4pf9utGbSxnprRUlaEpKS0pwxs/edit?usp=sharing"></app-external-page-link>
-                </div>
-                <app-technologies-worked-with style="width: 100%;" titleWithInfo="Główne technologie:" [technologies]="commonTechnologies"></app-technologies-worked-with>               
-                <app-technologies-worked-with style="width: 100%;" titleWithInfo="Technologie dodatkowe:" [technologies]="hadExperienceTechnologies"></app-technologies-worked-with>  
-                <app-page-elements style="width: 100%;"></app-page-elements>           
-            </div>
+            }
         </div>
-    }
+        <div class="vertical-line"></div>
+        <div class="info">
+            <div class="name">
+                <b>Bartłomiej Kucharczyk</b>
+            </div>
+            <div class="title">Programista Backend</div>
+            <div class="location">
+                <img style="height: 1em; width: 1em;" src="/utils/location-pin.svg">&nbsp;
+                <b>Warszawa, Polska</b>
+            </div>
+            <div class="links">
+                <app-external-page-link name="Github" image="/logos/websites/github.svg" externalLink="https://github.com/shane3102"></app-external-page-link>
+                <app-external-page-link name="Linkedin" image="/logos/websites/linkedin.svg" externalLink="https://www.linkedin.com/in/bartłomiej-kucharczyk"></app-external-page-link>
+                <app-external-page-link name="CV" image="/utils/external-link.svg" externalLink="https://docs.google.com/document/d/1aKcYIXCtjwz7GOCjC4pf9utGbSxnprRUlaEpKS0pwxs/edit?usp=sharing"></app-external-page-link>
+            </div>
+            <app-technologies-worked-with style="width: 100%;" titleWithInfo="Główne technologie:" [technologies]="commonTechnologies"></app-technologies-worked-with>               
+            <app-technologies-worked-with style="width: 100%;" titleWithInfo="Technologie dodatkowe:" [technologies]="hadExperienceTechnologies"></app-technologies-worked-with>  
+            <app-page-elements style="width: 100%;"></app-page-elements>           
+        </div>
+    </div>
 </div>
