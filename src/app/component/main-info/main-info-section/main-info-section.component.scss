@@ -26,17 +26,7 @@ $label-font-size: clamp(1vh, 1em, 3vh);
     height: $image-size;
     border-radius: calc($image-size / 2);
     overflow: hidden;
-    animation: 750ms ease-out slideInFromLeft;
-}
-
-@keyframes slideInFromLeft {
-    0% {
-        transform: translateX(-100%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
+    animation: 750ms ease-out slideInFromTop;
 }
 
 .image img {
