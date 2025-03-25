@@ -3,15 +3,13 @@ import { technology } from '../../../utils/GlobalDefinitions';
 import { ExternalPageLinkComponent } from '../external-page-link/external-page-link.component';
 import { TechnologiesWorkedWithComponent } from '../technologies-worked-with/technologies-worked-with.component';
 import { PageElementsComponent } from '../page-elements/page-elements.component';
-import { SpinnerComponent } from '../../spinner/spinner.component';
 
 @Component({
   selector: 'app-main-info-section',
   imports: [
     ExternalPageLinkComponent,
     TechnologiesWorkedWithComponent,
-    PageElementsComponent,
-    SpinnerComponent
+    PageElementsComponent
   ],
   templateUrl: './main-info-section.component.html',
   styleUrl: './main-info-section.component.scss'
@@ -19,7 +17,7 @@ import { SpinnerComponent } from '../../spinner/spinner.component';
 export class MainInfoSectionComponent {
 
   imageSource: string = "/photos/photo.jpg"
-  loaded: boolean = false
+  imageLoaded: boolean = false
 
   commonTechnologies: technology[] = ['Java', 'Kotlin', 'Spring Boot', 'Docker', 'PostgreSQL', 'Kafka']
   hadExperienceTechnologies: technology[] = ['Quarkus', 'Redis', 'RabbitMQ', 'Angular', 'Typescript', 'MySql', 'MongoDB']
@@ -33,7 +31,7 @@ export class MainInfoSectionComponent {
   }
 
   markAsLoaded() {
-    this.loaded = true
+    this.imageLoaded = true
   }
 
 }
