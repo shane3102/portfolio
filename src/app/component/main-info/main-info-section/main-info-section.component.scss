@@ -1,17 +1,17 @@
 @use '../../../../styles';
 
-$image-size: min(70dvh, 40vw);
+$image-size: min(70svh, 40vw);
 $label-font-size: clamp(1vh, 1em, 3vh);
 
 .content-wrapper {
-    height: 100dvh;
+    height: 100svh;
 }
 
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100dvh;
+    height: 100svh;
 }
 
 .image-wrapper {
